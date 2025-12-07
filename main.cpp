@@ -1,17 +1,20 @@
+#include <iostream>
 #include "SI/all.hpp"
 using namespace si;
 
 int main()
 {
-	// Example 1:
-	length Paris_to_Berlin = 878.080_km;
-	time my_flight_time = 900_s;
-	speed average_speed = Paris_to_Berlin / my_flight_time;
+	// Example 1: 
+	auto Marathon = 42.195_km;
+	auto Kiptums_time = 2_h;
+	auto average_speed = Marathon / Kiptums_time;
+	std::cout << "Kiptum's average speed was: " << miles_per_hour(average_speed) << " MPH" << std::endl;
 
 	// Example 2:
-	mass m = kilogram(1.0);
-	speed c = speed_of_light;
+	mass m = 1_kg;
+	speed c = constant::speed_of_light;
 	energy E = m * c*c;
+	std::cout << "Energy of 1kg mass is: " << joule(E) << " Joule" << std::endl;
 
 	return 0;
 }

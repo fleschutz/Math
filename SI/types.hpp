@@ -826,7 +826,79 @@ namespace si
 	inline constexpr auto kilograms_per_meter3 = kilogram / (meter * meter * meter);
 
 	// Declaring the following constants constexpr somehow caused si functions to show up in completely unrelated template error diagnostics
+
+
+	///@{
+	/// Prints a quantity to string
+	/**
+		Prints value in base units, without adding the unit string.
+
+		Example: 1000 meters is printed as "1000"
+	*/
+	template <class Dimension, class T>
+	std::to_chars_result to_chars(char* first, char* last, const detail::quantity<Dimension, T>& q)
+	{
+		return std::to_chars(first, last, value(q));
+	}
+	///@}
+
+	/// Reads a quantity from a string
+	/**
+		Supports some basic unit strings (e.g. "m", "ft", "m/s", "km/h", ...).
+
+		Silently skips any superfluous whitespaces between value
+		and unit.
+	*/
+	template <class Dimension, class T>
+	std::from_chars_result from_chars(const char* first, const char* last, detail::quantity<Dimension, T>& q)
+	{
+		static constexpr int dimension[] = { Dimension::length, Dimension::mass, Dimension::time, Dimension::temperature, Dimension::angle };
+
+		double x = {};
+		auto ret = detail::from_chars(first, last, dimension, x);
+		value(q) = static_cast<T>(x);
+
+		return ret;
+	}
 }
+
+#if 0
+namespace core
+{
+	namespace detail
+	{
+		template <class Dimension, class T>
+		struct value_tree_translator<si::detail::quantity<Dimension, T>>
+		{
+			static std::string to_string(const si::detail::quantity<Dimension, T>& value)
+			{
+				char buffer[128] = "";
+				auto result = si::to_chars(std::begin(buffer), std::end(buffer), value);
+				return buffer;
+			}
+
+			static value_tree_value<si::detail::quantity<Dimension, T>> from_string(std::string_view text)
+			{
+				if (!text.empty())
+				{
+					si::detail::quantity<Dimension, T> value = {};
+					auto last = text.data() + text.size();
+					auto result = si::from_chars(text.data(), last, value);
+
+					// make sure we consumed all characters
+					if (result.ptr == last && result.ec == std::errc())
+						return value;
+				}
+
+				std::string err("invalid value '");
+				err.append(text);
+				err.append("'");
+				return value_tree_error(std::move(err), "");
+			}
+		};
+	}
+}
+#endif
 
 #undef SI_RETURN_QUANTITY
 #undef SI_QUANTITY
