@@ -1,6 +1,10 @@
-#include <SI>
+#include "SI/all.hpp"
 
-void main()
+using namespace si;
+
+int main()
 {
 	int a = 1;
+
+	return 0;
 }
