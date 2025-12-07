@@ -25,5 +25,10 @@ namespace si
 		{
 			return q * v * B;
 		}
+
+		auto free_fall_time(si::height h, si::acceleration gravity)
+		{
+			return sqrt((2.0 * h) / gravity);
+		}
 	}
 }

@@ -21,9 +21,9 @@ int main()
 	print(H2_wavelength, "is the wavelength of H2 in vacuum");
 
 	// Example 4:
-	height Eiffel_Tower = 330_m;
-	auto time_to_fall = sqrt((2.0 * Eiffel_Tower) / constant::gravity_of_Earth);
-	print(time_to_fall, "is the free fall time from Eiffel Tower");
+	height Eiffel_Tower_height = 330_m;
+	auto time_falling = formula::free_fall_time(Eiffel_Tower_height, constant::gravity_of_Earth);
+	print(time_falling, "free fall time from Eiffel Tower");
 
 	// Example 5:
 	auto Markus_height = 190_cm;
