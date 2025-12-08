@@ -741,11 +741,11 @@ namespace si
 	using position = length3;
 
 	// SI prefixes
-	inline constexpr auto giga = unit<detail::null_dimension, 1000000000>();
-	inline constexpr auto mega = unit<detail::null_dimension, 1000000>();
+	inline constexpr auto giga  = unit<detail::null_dimension, 1000000000>();
+	inline constexpr auto mega  = unit<detail::null_dimension, 1000000>();
 	inline constexpr auto hecto = unit<detail::null_dimension, 100>();
-	inline constexpr auto kilo = unit<detail::null_dimension, 1000>();
-	inline constexpr auto one = unit<detail::null_dimension>();
+	inline constexpr auto kilo  = unit<detail::null_dimension, 1000>();
+	inline constexpr auto one   = unit<detail::null_dimension>();
 	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
 	inline constexpr auto micro = unit<detail::null_dimension, 1, 1000000>();
 
@@ -807,6 +807,7 @@ namespace si
 	// Here, we have to use the correct factor of 1852 m / 3600 s = 0.5144444 m/s (which is what ExEngine MS2KTS uses)
 	// inline constexpr auto knots = nautical_mile / hour;
 	inline constexpr auto knots = unit<speed, 1852, 3600>();
+	inline constexpr auto Mach = unit<speed, 330, 1>();
 
 	inline constexpr auto feet_per_minute = feet / minute;
 	inline constexpr auto millimeters_per_hour = millimeter / hour;

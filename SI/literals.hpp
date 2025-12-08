@@ -24,7 +24,8 @@ namespace si
 	LITERAL(kmh,  kilometers_per_hour);	// 100_kmh
 	LITERAL(kn,   knots);			// 60_kn
 	LITERAL(m,    meter);			// 1_m
-	LITERAL(min,  minute);			// 60_min
+	LITERAL(Mach, Mach);                    // 6_Mach
+	LITERAL(min,  minute);                  // 60_min
 	LITERAL(MHz,  megahertz);		// 128_MHz
 	LITERAL(mm,   millimeter);		// 10_mm
 	LITERAL(mph,  miles_per_hour);		// 50_mph
