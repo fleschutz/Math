@@ -10,6 +10,7 @@
 namespace si
 {
 	// Symbol:  Unit:                 Example: (sorted alphabetically)
+	//MAP( A,     ampere);              // 5_A
 	MAP( cm,    centimeter);          // 9_cm
 	MAP( deg,   degree);              // 90_deg
 	MAP( degC,  celsius);             // 0_degC
