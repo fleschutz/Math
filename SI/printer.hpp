@@ -4,6 +4,13 @@
 
 namespace si
 {
+	void check(bool condition)
+	{
+		if (!condition)
+			std::cout << "The condition has failed" << std::endl;
+	}
+
+
 	void H1(const char* text)
 	{
 		std::cout << "" << std::endl;
@@ -26,11 +33,11 @@ namespace si
 		std::cout << "" << std::endl;
 	}
 
-#define CALC(_cmds) \
+#define FORMULA(_cmds) \
 	P(#_cmds); \
 	_cmds
 
-	void print(si::length d, const char* description)
+	void printResult(si::length d, const char* description)
 	{
 		if (d >= si::kilometer(1))
 			std::cout << "-> " << kilometer(d) << " km " << description << std::endl;
@@ -40,7 +47,7 @@ namespace si
 			std::cout << "-> " << centimeter(d) << " cm " << description << std::endl;
 	}
 
-	void print(si::time t, const char* description)
+	void printResult(si::time t, const char* description)
 	{
 		if (t >= si::hour(1))
 			std::cout << "-> " << hour(t) << "h " << description << std::endl;
@@ -50,12 +57,12 @@ namespace si
 			std::cout << "-> " << second(t) << " sec " << description << std::endl;
 	}
 
-	void print(si::speed v, const char* description)
+	void printResult(si::speed v, const char* description)
 	{
 		std::cout << "-> " << kilometers_per_hour(v) << " km/h " << description << std::endl;
 	}
 
-	void print(si::energy E, const char* description)
+	void printResult(si::energy E, const char* description)
 	{
 		if (E >= si::gigajoule(1))
 			std::cout << "-> " << megajoule(E) << " GJ " << description << std::endl;
@@ -67,7 +74,7 @@ namespace si
 			std::cout << "-> " << joule(E) << " Joule " << description << std::endl;
 	}
 
-	void print(si::temperature T, const char* description)
+	void printResult(si::temperature T, const char* description)
 	{
 		std::cout << "-> " << celsius(T) << "°C " << description << std::endl;
 	}
