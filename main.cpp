@@ -3,17 +3,26 @@ using namespace si;
 
 int main()
 {
+	H1("Math is Fun");
+
+	H2("Speed Calculations");
+
+	P("Let's calculate Kiptum's average speed:");
+
+	CALC(
+	auto Marathon_distance = 42.195_km;
+	auto Kiptums_time = 2_h;
+	auto Kiptums_average_speed = Marathon_distance / Kiptums_time;
+	);
+	print(Kiptums_average_speed, "was Kiptum's average speed");
+
+	H2("Next Example");
+
 	// Example 1:
 	auto m = 1_kg;
 	auto c = constant::speed_of_light;
 	auto E = m * c * c;
 	print(E, "is the potential energy of 1 kg mass");
-
-	// Example 2: 
-	auto Marathon_distance = 42.195_km;
-	auto Kiptums_time = 2_h;
-	auto Kiptums_average_speed = Marathon_distance / Kiptums_time;
-	print(Kiptums_average_speed, "was Kiptum's average speed");
 
 	// Example 3:
 	auto car = 1500_kg;

@@ -4,6 +4,32 @@
 
 namespace si
 {
+	void H1(const char* text)
+	{
+		std::cout << "" << std::endl;
+		std::cout << text << std::endl;
+		std::cout << "===================" << std::endl;
+		std::cout << "" << std::endl;
+	}
+
+	void H2(const char* text)
+	{
+		std::cout << "" << std::endl;
+		std::cout << text << std::endl;
+		std::cout << "-------------------" << std::endl;
+		std::cout << "" << std::endl;
+	}
+
+	void P(const char* text)
+	{
+		std::cout << text << std::endl;
+		std::cout << "" << std::endl;
+	}
+
+#define CALC(_cmds) \
+	P(#_cmds); \
+	_cmds
+
 	void print(si::length d, const char* description)
 	{
 		if (d >= si::kilometer(1))

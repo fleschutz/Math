@@ -4,7 +4,7 @@
 #include "constants.hpp"
 #include "formulas.hpp"
 #include "literals.hpp"
-#include "print_helper.hpp"
+#include "printer.hpp"
 
 #include "Sun.hpp"
 #include "Mercury.hpp"
