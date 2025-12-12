@@ -19,6 +19,8 @@ namespace si
 		const auto radius = si::kilometer(6371);                 // (2*a+b) / 3
 		const auto diameter = 2.0 * radius;
 
+		const auto mass = si::kilogram(5.9723e24);
+
 		const auto Great_Wall_length = kilometer(6430); // (approximately)
 	}
 }

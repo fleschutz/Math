@@ -30,16 +30,6 @@ namespace si
 	P(#_cmds); \
 	_cmds
 
-	void printResult(si::length d, const char* description)
-	{
-		if (d >= si::kilometer(1))
-			std::cout << "-> " << kilometer(d) << " km " << description << std::endl;
-		else if (d >= si::meter(1))
-			std::cout << "-> " << meter(d) << "m " << description << std::endl;
-		else
-			std::cout << "-> " << centimeter(d) << " cm " << description << std::endl;
-	}
-
 	void printResult(si::time t, const char* description)
 	{
 		if (t >= si::hour(1))
@@ -50,9 +40,27 @@ namespace si
 			std::cout << "-> " << second(t) << " sec " << description << std::endl;
 	}
 
+	void printResult(si::length d, const char* description)
+	{
+		if (d >= si::kilometer(1))
+			std::cout << "-> " << kilometer(d) << " km " << description << std::endl;
+		else if (d >= si::meter(1))
+			std::cout << "-> " << meter(d) << "m " << description << std::endl;
+		else
+			std::cout << "-> " << centimeter(d) << " cm " << description << std::endl;
+	}
+
 	void printResult(si::speed v, const char* description)
 	{
 		std::cout << "-> " << kilometers_per_hour(v) << " km/h " << description << std::endl;
+	}
+
+	void printResult(si::acceleration a, const char* description)
+	{
+	}
+
+	void printResult(si::mass m, const char* description)
+	{
 	}
 
 	void printResult(si::energy E, const char* description)

@@ -22,6 +22,8 @@ namespace si
 	// Let's check time usage:
 	assert(1_min == 60_s);
 	assert(1_h == 3600_s);
+	assert(1_s == 1000_ms);
+	assert(1_ms == 0.001_s);
 
 	// Let's check the speed:
 	assert(1_kmh == 3.6_mps);

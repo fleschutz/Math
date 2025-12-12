@@ -33,6 +33,12 @@ namespace si
 		{
 			return q * v * B;
 		}
+#if 0
+		auto Kepler(mass m, length a)
+		{
+			return 4 * constant::pi * constant::pi * a*a*a / (constant::Gravity_constant * m );
+		}
+#endif
 
 		si::time free_fall_time(si::height h, si::acceleration gravity)
 		{

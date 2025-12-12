@@ -6,8 +6,78 @@ namespace si
 {
 	namespace constant
 	{
-		// Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
+		// Universal constants
+    		const auto c_0 = meters_per_second(299792458); // speed of light in vacuum
 		const auto speed_of_light = meters_per_second(299792458); // speed of light in vacuum (c)
+#if 0
+    static constexpr auto Z_0  = 376.730313667 * units::Ohm; // characteristic impedance of vacuum
+    static constexpr auto epsilon_0  = 8.854'187'817'620'39e-12 * units::F / units::m; // electric constant (vacuum permittivity)
+    static constexpr auto mu_0  = 1.256'637'06e-6 * units::N / units::A2; // magnetic constant (vacuum permeability)
+    static constexpr auto G  = 6.67408e-11 * units::m3 / units::kg / units::s2; // Newtonian constant of gravitation
+    static constexpr auto h  = 6.62607e-34 * units::J * units::s; // Planck constant
+    static constexpr auto h_bar  = 1.054'571'817e-34 * units::J * units::s; // reduced Planck constant
+#endif
+
+		    // Electromagnetic constants
+#if 0
+    static constexpr auto mu_B  = 9.2740100e-24 * units::J / units::T; // Bohr magneton
+    static constexpr auto G_0  = 7.748091729e-5 * units::S; // conductance quantum
+    static constexpr auto K_Jm90  = 48359e9 * units::Hz / units::V; // conventional value of Josephson constant[30]
+    static constexpr auto R_Km90  = 25812.807 * units::Ohm; // conventional value of von Klitzing constant[32]
+    static constexpr auto e  = 1.602176e-19 * units::C; // elementary charge
+    static constexpr auto G_0_inv  = 12906.40372 * units::Ohm; // inverse conductance quantum
+    static constexpr auto K_J  = 483597.8484e9 * units::Hz / units::V; // Josephson constant
+    static constexpr auto Phi_0  = 2.067833848e-15 * units::Wb; // magnetic flux quantum
+    static constexpr auto mu_N  = 5.0507837e-27 * units::J / units::T; // nuclear magneton
+    static constexpr auto R_K  = 25812.80745 * units::Ohm; // von Klitzing constant
+    static constexpr double k_e = 1.0 / (4*M_PI*epsilon_0);
+#endif
+
+        // Atomic and nuclear constants
+#if 0
+    static constexpr auto a_0  = 5.29177210e-11 * units::m; // Bohr radius
+    static constexpr auto r_e  = 2.8179403e-15 * units::m; // classical electron radius
+    static constexpr auto g_e  = -2.00231930436256; // electron g-factor
+    static constexpr auto m_e  = 9.1093837e-31 * units::kg; // electron mass
+    static constexpr auto G0_F = 1.1663e-5 / units::GeV  / units::GeV; // Fermi coupling constant
+    static constexpr auto alpha  = 7.2973525e-3; // fine-structure constant
+    static constexpr auto E_h  = 4.3597447222e-18 * units::J; // Hartree energy
+    static constexpr auto alpha_inv  = 137.035999084; // inverse fine-structure constant
+    static constexpr auto m_p  = 1.67262192e-27 * units::kg; // proton mass
+    static constexpr auto h_2me  = 3.6369475e-4 * units::m2 / units::s; // quantum of circulation
+    static constexpr auto R_inf  = 10973731.568160 / units::m; // Rydberg constant
+    static constexpr auto sigma_e  = 6.6524587e-29 * units::m2; // Thomson cross section
+    static constexpr auto sin2Theta_W  = 0.22290; // weak mixing angle
+#endif
+
+        	// Physico-chemical constants
+#if 0
+    static constexpr auto m_u  = 1.66053906e-27 * units::kg; // Atomic mass constant
+    static constexpr auto N_A  = 6.02214e23 / units::mol; // Avogadro constant
+    static constexpr auto k_B  = 1.380'649e-23 * units::J / units::K; // Boltzmann constant
+    static constexpr auto F  = 96485.33212 * units::C / units::mol; // Faraday constant
+    static constexpr auto c_1  = 3.741771852e-16 * units::W * units::m2; // first radiation constant
+    static constexpr auto c_1L  = 1.191042972e-16 * units::W * units::m2 / units::sr; // first radiation constant for spectral radiance
+    static constexpr auto n_0  = 2.651645804e25 / units::m3; // Loschmidt constant
+    static constexpr auto R  = 8.314462618 * units::J / units::mol / units::K; // gas constant
+    static constexpr auto N_Ah  = 3.990312712e-10 * units::J / units::Hz / units::mol; // molar Planck constant
+    static constexpr auto M_u  = 0.99999999e-3 * units::kg / units::mol; // molar mass constant
+    static constexpr auto V_m  = 22.71095464e-3 * units::m3 / units::mol; // molar volume of an ideal gas
+    static constexpr auto S_0_by_R  = -1.15170753706; // Sackur–Tetrode constant
+    static constexpr auto c_2  = 1.438776877e-2 * units::m * units::K; // second radiation constant
+    static constexpr auto sigma  = 5.670374419e-8 * units::W / units::m2 / units::K2; // Stefan–Boltzmann constant
+    static constexpr auto b  = 2.897771955e-3 * units::m * units::K; // Wien wavelength displacement law constant
+    static constexpr auto b_prime = 5.878925757e10 * units::Hz / units::K; // Wien frequency displacement law constant
+#endif
+
+	        // Adopted values
+#if 0
+    static constexpr auto g_0  = 9.80665 * units::m / units::s2; // standard acceleration of gravity
+    static constexpr auto atm  = 101325 * units::Pa; // standard atmosphere
+#endif
+    		const auto Deltanu_Cs  = hertz(9192631770); // Caesium standard (defines the SI second)
+
+		// Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
 
 		const auto speed_of_sound = meters_per_second(343); // speed of sound in air at 20 °C (68 °F)
 
@@ -15,7 +85,7 @@ namespace si
 
 		const auto min_temperature = kelvin(0.0);
 
-		// const auto Gravitational_constant = 6.6743015×10−11 m3⋅kg−1⋅s−2
+//		const auto Gravitational_constant = 6.6743015e−11 * si::m3 / si::kilogram / si::s2;
 
 		const auto electron_mass = kilogram(9.1093837139 * 10E-31);
 		const auto muon_mass = kilogram(1.883531627 * 10E-28);
@@ -29,5 +99,20 @@ namespace si
 		const auto pi = degree(180);
 		const auto half_pi = degree(90);
 		const auto tau = degree(360);
+
+#if defined(__clang__) || defined(_MSC_VER)
+    static constexpr auto ε_0  = 8.8541878e-12 * units::F / units::m; // electric constant (vacuum permittivity)
+    static constexpr auto μ_0  = 1.25663706e-6 * units::N / units::A2 ; // magnetic constant (vacuum permeability)
+    static constexpr auto ℏ  = 1.054571817e-34 * units::J * units::s; // reduced Planck constant
+    static constexpr auto μ_B  = 9.2740100e-24 * units::J / units::T; // Bohr magneton
+    static constexpr auto Φ_0  = 2.067833848e-15 * units::Wb; // magnetic flux quantum
+    static constexpr auto μ_N  = 5.0507837e-27 * units::J / units::T; // nuclear magneton
+    static constexpr auto α  = 7.2973525e-3; // fine-structure constant
+    static constexpr auto α_inv  = 137.035999084; // inverse fine-structure constant
+    static constexpr auto σ_e  = 6.6524587e-29 * units::m2; // Thomson cross section
+    static constexpr auto sin2θ_W  = 0.22290; // weak mixing angle
+    static constexpr auto σ  = 5.670374419e-8 * units::W / units::m2 / units::K2; // Stefan–Boltzmann constant
+    static constexpr auto Δν_Cs  = 9192631770 * units::Hz; // Caesium standard (defines the SI second)
+#endif
 	}
 }	

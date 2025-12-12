@@ -58,6 +58,13 @@ int main()
 	auto fly_speed = 1_Mach;
 	auto time_needed = fly_distance / fly_speed;
 	printResult(time_needed, "is needed to fly non-stop around the Earth at Mach 1");
-
+#if 0
+	// Let's calculate the Earth year:
+	auto sunMass = Sun::mass;
+	auto earthMass = Earth::mass;
+	auto a = 149597870700_m;
+	auto year = formula::Kepler(sunMass + earthMass, a);
+	printResult(year, "is a Earth year");
+#endif
 	return 0;
 }
