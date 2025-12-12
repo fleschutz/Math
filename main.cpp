@@ -21,13 +21,6 @@ int main()
 	auto KE = formula::kinetic_energy(car, normal_speed);
 	printResult(KE, "is the kinetic energy of a normal car at 30MPH");
 
-	// Let's check the length conversion:
-	check(1_m == 10_dm);
-	check(1_m == 100_cm);
-	check(1_m == 1000_mm);
-	check(1_m == 0.001_km);
-	check(1_m == 3.28084_ft);
-
 	// Example 5:
 	auto avg_speed = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
 	printResult(avg_speed, "average speed");

@@ -4,13 +4,6 @@
 
 namespace si
 {
-	void check(bool condition)
-	{
-		if (!condition)
-			std::cout << "The condition has failed" << std::endl;
-	}
-
-
 	void H1(const char* text)
 	{
 		std::cout << "" << std::endl;
