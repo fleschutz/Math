@@ -12,3 +12,10 @@ auto m = 1_kg;
 auto c = constant::light_speed;
 auto E = m * c * c;
 ```
+
+Features
+--------
+* Supports type checking: Can't add a mass to a length
+* Supports convenient literals, e.g. 10_km
+* No runtime overhead: Compiles to nothing but simple doubles
+* 
