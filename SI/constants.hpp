@@ -8,7 +8,7 @@ namespace si
 	{
 		// Universal constants
     		const auto c_0 = meters_per_second(299792458); // speed of light in vacuum
-		const auto speed_of_light_in_vaccum = meters_per_second(299792458); // speed of light in vacuum (c)
+		const auto speed_of_light_in_vacuum = meters_per_second(299792458); // speed of light in vacuum (c)
 #if 0
     static constexpr auto Z_0  = 376.730313667 * units::Ohm; // characteristic impedance of vacuum
     static constexpr auto epsilon_0  = 8.854'187'817'620'39e-12 * units::F / units::m; // electric constant (vacuum permittivity)
@@ -33,26 +33,31 @@ namespace si
     static constexpr double k_e = 1.0 / (4*M_PI*epsilon_0);
 #endif
 
-        // Atomic and nuclear constants
+        	// Atomic and nuclear constants
+		const auto electron_mass = kilogram(9.1093837139e-31);
+    		const auto m_e  = kilogram(9.1093837e-31); // electron mass
+		const auto muon_mass = kilogram(1.883531627e-28);
+		const auto tau_mass = kilogram(3.16754e-27);
+		const auto proton_mass = kilogram(1.67262192595e-27);
+    		const auto m_p = kilogram(1.67262192e-27); // proton mass
+		const auto neutron_mass = kilogram(1.67492750056 * 10E-27);
+    		const auto a_0 = meter(5.29177210e-11); // Bohr radius
+    		const auto r_e = meter(2.8179403e-15); // classical electron radius
+    		const double g_e = -2.00231930436256; // electron g-factor
+    		const auto alpha = 7.2973525e-3; // fine-structure constant
+    		const auto alpha_inv = 137.035999084; // inverse fine-structure constant
+    		const auto E_h  = joule(4.3597447222e-18); // Hartree energy
+    		const auto sin2Theta_W  = 0.22290; // weak mixing angle
 #if 0
-    static constexpr auto a_0  = 5.29177210e-11 * units::m; // Bohr radius
-    static constexpr auto r_e  = 2.8179403e-15 * units::m; // classical electron radius
-    static constexpr auto g_e  = -2.00231930436256; // electron g-factor
-    static constexpr auto m_e  = 9.1093837e-31 * units::kg; // electron mass
     static constexpr auto G0_F = 1.1663e-5 / units::GeV  / units::GeV; // Fermi coupling constant
-    static constexpr auto alpha  = 7.2973525e-3; // fine-structure constant
-    static constexpr auto E_h  = 4.3597447222e-18 * units::J; // Hartree energy
-    static constexpr auto alpha_inv  = 137.035999084; // inverse fine-structure constant
-    static constexpr auto m_p  = 1.67262192e-27 * units::kg; // proton mass
     static constexpr auto h_2me  = 3.6369475e-4 * units::m2 / units::s; // quantum of circulation
     static constexpr auto R_inf  = 10973731.568160 / units::m; // Rydberg constant
     static constexpr auto sigma_e  = 6.6524587e-29 * units::m2; // Thomson cross section
-    static constexpr auto sin2Theta_W  = 0.22290; // weak mixing angle
 #endif
 
         	// Physico-chemical constants
+    		const auto m_u = kilogram(1.66053906e-27); // Atomic mass constant
 #if 0
-    static constexpr auto m_u  = 1.66053906e-27 * units::kg; // Atomic mass constant
     static constexpr auto N_A  = 6.02214e23 / units::mol; // Avogadro constant
     static constexpr auto k_B  = 1.380'649e-23 * units::J / units::K; // Boltzmann constant
     static constexpr auto F  = 96485.33212 * units::C / units::mol; // Faraday constant
@@ -86,12 +91,6 @@ namespace si
 		const auto min_temperature = kelvin(0.0);
 
 //		const auto Gravitational_constant = 6.6743015e−11 * si::m3 / si::kilogram / si::s2;
-
-		const auto electron_mass = kilogram(9.1093837139 * 10E-31);
-		const auto muon_mass = kilogram(1.883531627 * 10E-28);
-		const auto tau_mass = kilogram(3.16754 * 10E-27);
-		const auto proton_mass = kilogram(1.67262192595 * 10E-27);
-		const auto neutron_mass = kilogram(1.67492750056 * 10E-27);
 
 		const auto Marathon_length = kilometer(42.195);
 

@@ -38,19 +38,25 @@ MAP( second,1,     second);              // 60_second
 MAP( N,     1,     newton);              // 5.0_N
 MAP( Nm,    1,     newtonmeter);         // 2.1_Nm
 
-// Non-SI literals:
+#ifdef WITH_IMPERIAL_UNITS
 // Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
-MAP( degC,  1,     celsius);             // 0_degC
 MAP( degF,  1,     fahrenheit);          // 32_degF
 MAP( degR,  5/9,   kelvin);              // 60_degR
 MAP( ft,    .3048, meter);               // 5_ft
 MAP( in,    0.0254,meter);               // 9_in
-MAP( kn,    0.51445, meters_per_second); // 60_kn
-MAP( kt,    0.51445, meters_per_second); // 10_kt
-MAP( Mach,  330,   meters_per_second);   // 6_Mach
+MAP( kn,    1'852.0, kilometers_per_hour); // 60_kn
+MAP( kt,    1'852.0, kilometers_per_hour); // 10_kt
+MAP( lb,    453.592'37, gram);		 // 6_lb
+MAP( oz,    28.349'523'125, gram);       // 13_oz
+MAP( mi,    1'609.344, meter);           // 8_mi
 MAP( mph,   .44704,meters_per_second);   // 50_mph
 MAP( NM,    1852,  meter);               // 1_NM
 MAP( nmi,   1852,  meter);               // 1_nmi
+MAP( yd,    .9144, meter);               // 3_yd
+#endif
+
+MAP( degC,  1,     celsius);             // 0_degC
+MAP( Mach,  330,   meters_per_second);   // 6_Mach
 
 	void test_literals(); // Unit tests (in SI/test_literals.cpp)
 }

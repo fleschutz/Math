@@ -17,7 +17,9 @@ namespace si
 	assert(1_dm == 0.1_m);
 	assert(1_cm == 0.01_m);
 	assert(1_mm == 0.001_m);
+#ifdef WITH_IMPERIAL_UNITS
 	assert(1_NM == 1852_m);
+#endif
 
 	// Let's check time usage:
 	assert(1_min == 60_s);
