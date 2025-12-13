@@ -1,4 +1,4 @@
-// SI/Sun.hpp - physical characteristics of the Sun
+// SI/Sun.hpp - contains physical characteristics of the Sun
 #pragma once
 
 #include "types.hpp"

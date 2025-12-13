@@ -1,3 +1,4 @@
+// SI/Moon.hpp - contains physical characteristics of the Moon
 #pragma once
 
 #include "types.hpp"

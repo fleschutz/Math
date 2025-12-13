@@ -1,3 +1,4 @@
+// SI/Mars.hpp - contains physical characteristics of planet Mars
 #pragma once
 
 #include "types.hpp"

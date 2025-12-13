@@ -1,3 +1,4 @@
+// SI/Mercury.hpp - contains physical characteristics of planet Mercury
 #pragma once
 
 #include "types.hpp"
