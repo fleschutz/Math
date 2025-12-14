@@ -23,7 +23,9 @@ namespace si
 
 		const auto mass = si::kilogram(5.9723e24);
 
-		const auto surface_area = si::kilometer2(510'072'000);
+		static constexpr auto surface_area = si::kilometer2(510'072'000);
+		static constexpr auto land_area = si::kilometer2(148'940'000);
+		static constexpr auto water_area = si::kilometer2(361'132'000);
 
 		// Mountains:  (source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth, heights above MSL, sorted by height)
 		const auto Mount_Everest_height = meter(8849);

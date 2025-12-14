@@ -1,6 +1,7 @@
 // SI/test_literals.cpp - Unit tests of SI literals
 #include <cassert>
 #include "literals.hpp"
+#include "Earth.hpp"
 using namespace si;
 
 namespace si
@@ -17,9 +18,10 @@ namespace si
 		static_assert(1_dm == 0.1_m);
 		static_assert(1_cm == 0.01_m);
 		static_assert(1_mm == 0.001_m);
-#ifdef WITH_IMPERIAL_UNITS
 		static_assert(1_NM == 1852_m);
-#endif
+
+		// SI area:
+		static_assert(Earth::land_area + Earth::water_area == Earth::surface_area);
 
 		// Let's check the SI time:
 		static_assert(1_min == 60_s);

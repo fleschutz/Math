@@ -790,6 +790,7 @@ namespace si
 	inline constexpr auto degree = detail::unit<detail::angle_dimension, detail::ratio_degree>();
 
 	inline constexpr auto meter2 = unit<area>();
+	inline constexpr auto kilometer2 = kilo * kilo * meter2;
 
 	inline constexpr auto hertz = unit<frequency>();
 	inline constexpr auto kilohertz = kilo * hertz;

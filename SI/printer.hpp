@@ -30,6 +30,14 @@ namespace si
 			std::cout << " It's " << centimeter(d) << " cm" << std::endl;
 	}
 
+	void print(si::area a)
+	{
+		if (a >= si::kilometer2(1))
+			std::cout << " It's " << kilometer2(a) << " km²" << std::endl;
+		else
+			std::cout << " It's " << meter2(a) << " m²" << std::endl;
+	}
+
 	void print(si::speed v)
 	{
 		std::cout << " It's " << kilometers_per_hour(v) << " km/h" << std::endl;
