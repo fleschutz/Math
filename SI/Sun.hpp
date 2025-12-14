@@ -21,5 +21,6 @@ namespace si
 		const auto center_temperature = kelvin(15700000);
 		const auto photosphere_temperature = kelvin(5772);
 		const auto corona_temperature = kelvin(5000000);
+		const quantity human_population = 0; // as of 2025
 	}
 }

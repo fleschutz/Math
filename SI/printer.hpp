@@ -6,7 +6,7 @@ namespace si
 {
 	void print(std::string description)
 	{
-		std::cout << std::endl << description;
+		std::cout << description;
 	}
 
 	void print(si::time t)

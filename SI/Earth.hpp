@@ -44,5 +44,7 @@ namespace si
 		const auto Annapurna_2_height   = meter(7937);
 		// ...
 		const auto Zugspitze_height     = meter(2962);
+
+		const quantity human_population = 8.2e9; // as of 2024
 	}
 }

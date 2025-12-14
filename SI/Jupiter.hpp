@@ -9,5 +9,6 @@ namespace si
 	{
 		const auto diameter = kilometer(152800);
 		const auto radius = diameter / 2.0;
+		const quantity human_population = 0; // as of 2025
 	}
 }

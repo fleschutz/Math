@@ -16,19 +16,19 @@ int main()
 	auto E = m * c * c;
 	print(E);
    } {
- 	print("What's the kinetic energy of a normal car at 30MPH?");
+ 	print("What's the kinetic energy of a normal car at 50 km/h?");
 	auto car = 1500_kg;
-	auto normal_speed = 30_mph;
+	auto normal_speed = 50_kmh;
 	auto KE = formula::kinetic_energy(car, normal_speed);
 	print(KE);
    } {
-	print("What's the average speed?");
-	auto avg_speed = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
-	print(avg_speed);
+	print("What's the average speed here?");
+	auto average = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
+	print(average);
    } {
-	print("What's the average temperature?");
-	auto avg_temperature = (0_degC + 32_degF + 273.15_K) / 3;
-	print(avg_temperature);
+	print("What's the average temperature here?");
+	auto average = (0_degC + 32_degF + 273.15_K) / 3;
+	print(average);
    } {
 	print("What's the wavelength of H2 in vacuum?");
 	auto H2_frequency = 1420.4057517682_MHz;
@@ -55,8 +55,8 @@ int main()
 	print("What's the time needed to fly non-stop around the Earth at Mach 1?");
 	auto distance = Earth::equatorial_circumference;
 	auto speed = 1_Mach;
-	auto time_needed = distance / speed;
-	print(time_needed);
+	auto time = distance / speed;
+	print(time);
    } {
 	print("What's the travel time of sun light to Earth?");
 	auto distance = constant::AU;

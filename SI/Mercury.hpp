@@ -8,5 +8,6 @@ namespace si
 	namespace Mercury
 	{
 		const auto gravity = meters_per_second2(3.7); // surface gravity
+		const quantity human_population = 0; // as of 2025
 	}
 }
