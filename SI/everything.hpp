@@ -11,7 +11,5 @@
 #include "Mars.hpp"
 #include "Earth.hpp"
 #include "Jupiter.hpp"
-#include "buildings.hpp"
-#include "city_distances.hpp"
 
 #include "printer.hpp"
