@@ -35,7 +35,7 @@ int main()
 	auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
 	print(H2_wavelength);
    } {
-	print("What's the free fall time from the Eiffel Tower in Paris?");
+	print("What's the free fall time from Eiffel Tower in Paris?");
 	height Eiffel_Tower_height = 330_m;
 	auto result = formula::free_fall_time(Eiffel_Tower_height, Earth::gravity);
 	print(result);
