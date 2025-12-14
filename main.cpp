@@ -4,68 +4,69 @@ using namespace si;
 int main()
 {
     {	
-	// Let's calculate the average speed of Kiptum's world record in Marathon...
+	print("What's the average speed of Kiptum's world record in Marathon?");
 	auto distance = 42.195_km;
 	auto Kiptums_time = 2_h;
 	auto average_speed = distance / Kiptums_time;
-	print(average_speed, "was Kiptum's average speed");
+	print(average_speed);
    } {
-	// Let's calculate the potential energy of 1kg mass...
+	print("What's the potential energy of 1kg mass?");
 	auto m = 1_kg;
 	auto c = constant::speed_of_light_in_vacuum;
 	auto E = m * c * c;
-	print(E, "is the potential energy of 1 kg mass");
+	print(E);
    } {
- 	// Let's calculate the kinetic energy of a normal car at 30MPH...
+ 	print("What's the kinetic energy of a normal car at 30MPH?");
 	auto car = 1500_kg;
 	auto normal_speed = 30_mph;
 	auto KE = formula::kinetic_energy(car, normal_speed);
-	print(KE, "is the kinetic energy of a normal car at 30MPH");
+	print(KE);
    } {
-	// Example 5:
+	print("What's the average speed?");
 	auto avg_speed = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
-	print(avg_speed, "average speed");
+	print(avg_speed);
    } {
-	// Example 6:
+	print("What's the average temperature?");
 	auto avg_temperature = (0_degC + 32_degF + 273.15_K) / 3;
-	print(avg_temperature, "average temperature");
+	print(avg_temperature);
    } {
-	// Example 7:
+	print("What's the wavelength of H2 in vacuum?");
 	auto H2_frequency = 1420.4057517682_MHz;
 	auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
-	print(H2_wavelength, "is the wavelength of H2 in vacuum");
+	print(H2_wavelength);
    } {
-	// Example 8:
+	print("What's the free fall time from the Eiffel Tower in Paris?");
 	height Eiffel_Tower_height = 330_m;
-	auto time_falling = formula::free_fall_time(Eiffel_Tower_height, Earth::gravity);
-	print(time_falling, "is the Eiffel Tower's free fall time");
+	auto result = formula::free_fall_time(Eiffel_Tower_height, Earth::gravity);
+	print(result);
    } {
-	// Let's calculate Markus' BMI...
+	print("What's Markus BMI?");
 	auto Markus_weight = 84_kg;
 	auto Markus_height = 190_cm;
 	auto BMI = Markus_weight / (Markus_height * Markus_height);
-	// print(BMI, "is Markus' BMI");
+	// print(BMI);
    } {
-	// Example 9:
+	print("What's a radar's geometrical horizon (the distance it can see)?");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
 	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
-	print(distance, "radar's geometrical horizon (the distance it can see)");
+	print(distance);
    } {
-	// Example 10:
-	auto fly_distance = Earth::equatorial_circumference;
-	auto fly_speed = 1_Mach;
-	auto time_needed = fly_distance / fly_speed;
-	print(time_needed, "is needed to fly non-stop around the Earth at Mach 1");
+	print("What's the time needed to fly non-stop around the Earth at Mach 1?");
+	auto distance = Earth::equatorial_circumference;
+	auto speed = 1_Mach;
+	auto time_needed = distance / speed;
+	print(time_needed);
    } {
-	// Let's calculate the travel time of sun light to Earth:
+	print("What's the travel time of sun light to Earth?");
 	auto distance = constant::AU;
 	auto speed = constant::speed_of_light_in_vacuum;
-	print(distance / speed, "is the travel time of sun light to Earth");
+	auto time = distance / speed;
+	print(time);
    } {
-	// Let's sum up bytes:
+	print("What's the sum of 1 byte + 1kB + 1GB...(and so on)?");
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
-	print(sum, "is the total number of bytes");
+	print(sum);
    }
 #if 0
 	// Let's calculate the Earth year:

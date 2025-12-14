@@ -4,70 +4,70 @@
 
 namespace si
 {
-	void print(std::string text)
+	void print(std::string description)
 	{
-		std::cout << text << std::endl;
+		std::cout << std::endl << description;
 	}
 
-	void print(si::time t, std::string description)
+	void print(si::time t)
 	{
 		if (t >= si::hour(1))
-			std::cout << "-> " << hour(t) << "h " << description << std::endl;
+			std::cout << " It's " << hour(t) << "h" << std::endl;
 		else if (t >= si::minute(1))
-			std::cout << "-> " << minute(t) << " min " << description << std::endl;
+			std::cout << " It's " << minute(t) << " min" << std::endl;
 		else
-			std::cout << "-> " << second(t) << " sec " << description << std::endl;
+			std::cout << " It's " << second(t) << " sec" << std::endl;
 	}
 
-	void print(si::length d, std::string description)
+	void print(si::length d)
 	{
 		if (d >= si::kilometer(1))
-			std::cout << "-> " << kilometer(d) << " km " << description << std::endl;
+			std::cout << " It's " << kilometer(d) << " km" << std::endl;
 		else if (d >= si::meter(1))
-			std::cout << "-> " << meter(d) << "m " << description << std::endl;
+			std::cout << " It's " << meter(d) << "m" << std::endl;
 		else
-			std::cout << "-> " << centimeter(d) << " cm " << description << std::endl;
+			std::cout << " It's " << centimeter(d) << " cm" << std::endl;
 	}
 
-	void print(si::speed v, std::string description)
+	void print(si::speed v)
 	{
-		std::cout << "-> " << kilometers_per_hour(v) << " km/h " << description << std::endl;
+		std::cout << " It's " << kilometers_per_hour(v) << " km/h" << std::endl;
 	}
 
-	void print(si::acceleration a, std::string description)
-	{
-	}
-
-	void print(si::mass m, std::string description)
+	void print(si::acceleration a)
 	{
 	}
 
-	void print(si::energy E, std::string description)
+	void print(si::mass m)
+	{
+	}
+
+	void print(si::energy E)
 	{
 		if (E >= si::gigajoule(1))
-			std::cout << "-> " << megajoule(E) << " GJ " << description << std::endl;
+			std::cout << " It's " << megajoule(E) << " GJ " << std::endl;
 		else if (E >= si::megajoule(1))
-			std::cout << "-> " << megajoule(E) << " MJ " << description << std::endl;
+			std::cout << " It's " << megajoule(E) << " MJ " << std::endl;
 		else if (E >= si::kilojoule(1))
-			std::cout << "-> " << kilojoule(E) << " kJ " << description << std::endl;
+			std::cout << " It's " << kilojoule(E) << " kJ " << std::endl;
 		else
-			std::cout << "-> " << joule(E) << " Joule " << description << std::endl;
+			std::cout << " It's " << joule(E) << " Joule " << std::endl;
 	}
 
-	void print(si::temperature T, std::string description)
+	void print(si::temperature T)
 	{
-		std::cout << "-> " << celsius(T) << "°C " << description << std::endl;
+		std::cout << " It's " << celsius(T) << "°C " << std::endl;
 	}
 
 #if 0
-	void print(kilogram_per_meter2 value, const char* description)
+	void print(kilogram_per_meter2 value)
 	{
-		std::cout << "-> " << kilogram_per_meter2(value) << " BMI " << description << std::endl;
+		std::cout << "-> " << kilogram_per_meter2(value) << " BMI " << std::endl;
 	}
 #endif
 
-	void print(si::byte number, std::string description)
+	void print(si::byte number)
 	{
-		std::cout << "-> " << number << " bytes " << description << std::endl;
+		std::cout << " It's " << number << " bytes " << std::endl;
 	}
 }
