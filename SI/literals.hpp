@@ -35,6 +35,7 @@ MAP( mm,    .001,  meter);               // 4_mm
 MAP( mps,   1,     meters_per_second);   // 10_mps
 MAP( mps2,  1,     meters_per_second2);  // 9.807_mps2
 MAP( ms,    .001,  second);              // 1_ms
+MAP( pc,3.2*9460730472580.8, kilometer); // 8_pc
 MAP( s,     1,     second);              // 60_s
 MAP( sec,   1,     second);              // 60_sec
 MAP( second,1,     second);              // 60_second

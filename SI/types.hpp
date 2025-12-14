@@ -769,6 +769,8 @@ namespace si
 	inline constexpr auto microgram = unit<mass, 1, 1000000000>();
 	inline constexpr auto pound = unit<mass, 45359237, 100000000>();
 
+	inline constexpr auto year        = unit<time, 365*24*3600>();
+	inline constexpr auto week        = unit<time, 7*24*3600>();
 	inline constexpr auto day         = unit<time, 24 * 3600>();
 	inline constexpr auto hour        = unit<time, 3600>();
 	inline constexpr auto minute      = unit<time, 60>();
@@ -832,6 +834,7 @@ namespace si
 	inline constexpr auto megajoule = meganewton * meter;
 	inline constexpr auto gigajoule = giganewton * meter;
 
+	inline constexpr auto joule_per_kelvin = joule / kelvin;
 	inline constexpr auto meters_per_second2 = meter / (second * second);
 
 	inline constexpr auto pascal_ = newton / (meter * meter);
@@ -884,8 +887,9 @@ namespace si
 	typedef long double ampere;
 	typedef long double byte;
 	typedef long double quantity;
+	typedef long double lumen_per_watt;
 
-	void unit_tests(); // Unit tests in SI/unit_tests.cpp
+	void unit_tests(); // unit tests in SI/unit_tests.cpp
 }
 
 #if 0

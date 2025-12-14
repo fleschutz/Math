@@ -11,6 +11,8 @@ namespace si
 		const auto speed_of_light_in_vacuum = meters_per_second(299'792'458);
     		const auto c = speed_of_light_in_vacuum;
     		const auto Δν_Cs  = hertz(9'192'631'770); // Caesium standard (defines the SI second)
+    		const auto k_B  = joule_per_kelvin(1.380'649e-23); // Boltzmann constant
+		const auto K_cd = lumen_per_watt(683); // luminous efficacy of 540 THz radiation
 #if 0
     static constexpr auto Z_0  = 376.730313667 * units::Ohm; // characteristic impedance of vacuum
     static constexpr auto epsilon_0  = 8.854'187'817'620'39e-12 * units::F / units::m; // electric constant (vacuum permittivity)
@@ -61,7 +63,6 @@ namespace si
     		const auto m_u = kilogram(1.66053906e-27); // Atomic mass constant
 #if 0
     static constexpr auto N_A  = 6.02214e23 / units::mol; // Avogadro constant
-    static constexpr auto k_B  = 1.380'649e-23 * units::J / units::K; // Boltzmann constant
     static constexpr auto F  = 96485.33212 * units::C / units::mol; // Faraday constant
     static constexpr auto c_1  = 3.741771852e-16 * units::W * units::m2; // first radiation constant
     static constexpr auto c_1L  = 1.191042972e-16 * units::W * units::m2 / units::sr; // first radiation constant for spectral radiance
@@ -113,9 +114,9 @@ namespace si
     static constexpr auto μ_N  = 5.0507837e-27 * units::J / units::T; // nuclear magneton
     static constexpr auto σ_e  = 6.6524587e-29 * units::m2; // Thomson cross section
     static constexpr auto σ  = 5.670374419e-8 * units::W / units::m2 / units::K2; // Stefan–Boltzmann constant
-#endif
     		const auto α  = 7.2973525e-3; // fine-structure constant
     		const auto α_inv  = 137.035999084; // inverse fine-structure constant
     		const auto sin2θ_W  = 0.22290; // weak mixing angle
+#endif
 	}
 }	

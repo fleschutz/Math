@@ -10,22 +10,30 @@ namespace si
 		// General:  (source: https://en.wikipedia.org/wiki/Earth)
 		const auto gravity = meters_per_second2(9.80665); // standard gravitational acceleration (G) for the surface of the Earth, defined 1901 in the third General Conference on Weights and Measures.
 
-		const auto equatorial_radius = si::kilometer(6378.1370); // denoted 'a'
+		const auto equatorial_radius = kilometer(6378.137); // denoted 'a'
 		const auto equatorial_diameter = 2.0 * equatorial_radius;
-		const auto equatorial_circumference = si::kilometer(40075.0167); 
+		const auto equatorial_circumference = kilometer(40075.0167); 
 
-		const auto polar_radius = si::kilometer(6356.7523);      // denoted 'b'
+		const auto polar_radius = kilometer(6356.752);      // denoted 'b'
 		const auto polar_diameter = 2.0 * polar_radius;
-		const auto polar_circumference = si::kilometer(40007.8629173);
+		const auto polar_circumference = kilometer(40007.8629173);
 
-		const auto radius = si::kilometer(6371);                 // (2*a+b) / 3
+		const auto radius = kilometer(6371);                 // (2*a+b) / 3
 		const auto diameter = 2.0 * radius;
 
-		const auto mass = si::kilogram(5.9723e24);
+		static constexpr auto surface_area = kilometer2(510'072'000);
+		static constexpr auto land_area = kilometer2(148'940'000);
+		static constexpr auto water_area = kilometer2(361'132'000);
 
-		static constexpr auto surface_area = si::kilometer2(510'072'000);
-		static constexpr auto land_area = si::kilometer2(148'940'000);
-		static constexpr auto water_area = si::kilometer2(361'132'000);
+		const auto volume = kilometer3(1.08321e12);
+
+		const auto mass = kilogram(5.9723e24);
+
+		const auto equatorial_rotation_velocity = kilometers_per_hour(1674.4);
+
+		const auto age = year(4.5e12);
+
+		const quantity human_population = 8.2e9; // as of 2024
 
 		// Mountains:  (source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth, heights above MSL, sorted by height)
 		const auto Mount_Everest_height = meter(8849);
@@ -70,7 +78,5 @@ namespace si
 		// ...
 		const auto NewYorkCity_to_Boston = kilometer(306);
 		const auto Paris_to_Berlin = kilometer(878.080);
-
-		const quantity human_population = 8.2e9; // as of 2024
 	}
 }
