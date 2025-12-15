@@ -1,14 +1,16 @@
 // SI/Moon.hpp - contains physical characteristics of the Moon
 #pragma once
-
 #include "types.hpp"
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si
 {
 	namespace Moon
 	{
-		const auto diameter = kilometer(3476);
-		const auto gravity = meters_per_second2(1.628);
-		const quantity human_population = 0; // as of 2025
+CONST( diameter,         3476,  kilometer);
+CONST( gravity,          1.628, meters_per_second2);
+CONST( human_population, 0,     quantity); // as of 2025
 	}
 }
+
+#undef CONST

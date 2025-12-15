@@ -1,13 +1,13 @@
 // SI/Sun.hpp - contains physical characteristics of the Sun
 #pragma once
-
 #include "types.hpp"
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si
 {
 	namespace Sun
 	{
-		const auto equatorial_radius = kilometer(695700);
+CONST( equatorial_radius, 695'700, kilometer);
 		const auto equatorial_rotation_velocity = meters_per_second(1997);
 		const auto equatorial_surface_gravity = meters_per_second2(274);
 		const auto surface_area = meter2(6.09e12);
@@ -24,3 +24,5 @@ namespace si
 		const quantity human_population = 0; // as of 2025
 	}
 }
+
+#undef CONST

@@ -1,14 +1,14 @@
 // SI/Earth.hpp - contains physical characteristics of planet Earth
 #pragma once
-
 #include "types.hpp"
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si
 {
 	namespace Earth
 	{
-		// General:  (source: https://en.wikipedia.org/wiki/Earth)
-		const auto gravity = meters_per_second2(9.80665); // standard gravitational acceleration (G) for the surface of the Earth, defined 1901 in the third General Conference on Weights and Measures.
+// General:  (source: https://en.wikipedia.org/wiki/Earth)
+CONST( gravity, 9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined 1901 in the third General Conference on Weights and Measures.
 
 		const auto equatorial_radius = kilometer(6378.137); // denoted 'a'
 		const auto equatorial_diameter = 2.0 * equatorial_radius;
@@ -80,3 +80,5 @@ namespace si
 		const auto Paris_to_Berlin = kilometer(878.080);
 	}
 }
+
+#undef CONST

@@ -1,18 +1,18 @@
 // SI/constants.hpp - contains constants in SI units
 #pragma once
-
 #include "types.hpp"
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si
 {
 	namespace constant
 	{
-		// Universal constants
-		const auto speed_of_light_in_vacuum = meters_per_second(299'792'458);
-    		const auto c = speed_of_light_in_vacuum;
-    		const auto Δν_Cs  = hertz(9'192'631'770); // Caesium standard (defines the SI second)
-    		const auto k_B  = joule_per_kelvin(1.380'649e-23); // Boltzmann constant
-		const auto K_cd = lumen_per_watt(683); // luminous efficacy of 540 THz radiation
+// Universal constants
+CONST( speed_of_light, 299'792'458,   meters_per_second); // speed of light in vacuum
+CONST( c,              299'792'458,   meters_per_second);
+CONST( Δν_Cs,          9'192'631'770, hertz); // Caesium standard (defines the SI second)
+CONST( k_B,            1.380'649e-23, joule_per_kelvin); // Boltzmann constant
+CONST( K_cd,           683,           lumen_per_watt); // luminous efficacy of 540 THz radiation
 #if 0
     static constexpr auto Z_0  = 376.730313667 * units::Ohm; // characteristic impedance of vacuum
     static constexpr auto epsilon_0  = 8.854'187'817'620'39e-12 * units::F / units::m; // electric constant (vacuum permittivity)
@@ -37,16 +37,16 @@ namespace si
     static constexpr double k_e = 1.0 / (4*M_PI*epsilon_0);
 #endif
 
-        	// Atomic and nuclear constants
-		const auto electron_mass = kilogram(9.1093837139e-31);
-    		const auto m_e  = kilogram(9.1093837e-31); // electron mass
-		const auto muon_mass = kilogram(1.883531627e-28);
-		const auto tau_mass = kilogram(3.16754e-27);
-		const auto proton_mass = kilogram(1.67262192595e-27);
-    		const auto m_p = kilogram(1.67262192e-27); // proton mass
-		const auto neutron_mass = kilogram(1.67492750056e-27);
-    		const auto a_0 = meter(5.29177210e-11); // Bohr radius
-    		const auto r_e = meter(2.8179403e-15); // classical electron radius
+// Atomic and nuclear constants
+CONST( electron_mass,        9.1093837139e-31,  kilogram);
+ALIAS( m_e,                                     electron_mass);
+CONST( muon_mass,            1.883531627e-28,   kilogram);
+CONST( tau_mass,             3.16754e-27,       kilogram);
+CONST( proton_mass,          1.67262192595e-27, kilogram);
+ALIAS( m_p,                                     proton_mass);
+CONST( neutron_mass,         1.67492750056e-27, kilogram);
+CONST( a_0,                  5.29177210e-11,    meter); // Bohr radius
+CONST( r_e,                  2.8179403e-15,     meter); // classical electron radius
     		const double g_e = -2.00231930436256; // electron g-factor
     		const auto alpha = 7.2973525e-3; // fine-structure constant
     		const auto alpha_inv = 137.035999084; // inverse fine-structure constant
@@ -83,27 +83,29 @@ namespace si
     static constexpr auto g_0  = 9.80665 * units::m / units::s2; // standard acceleration of gravity
     static constexpr auto atm  = 101325 * units::Pa; // standard atmosphere
 #endif
-		// Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
+   
+// Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
 
 		const auto speed_of_sound = meters_per_second(343); // speed of sound in air at 20 °C (68 °F)
 
 		const auto standard_gravity = meters_per_second2(9.80665); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
 
-		const auto min_temperature = kelvin(0.0);
-
 //		const auto Gravitational_constant = 6.6743015e−11 * si::m3 / si::kilogram / si::s2;
 
-		const auto Marathon_length = kilometer(42.195);
 
-		// Mathematical constants: (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
-		const auto pi = degree(180);
-		const auto half_pi = degree(90);
-		const auto tau = degree(360);
+// Mathematical constants: (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
+CONST( half_pi,     90, degree);
+CONST( pi,         180, degree);
+CONST( tau,        360, degree);
 
-		// Astronomical constants:
-		const auto AU = kilometer(149.5978707e6);
-		const auto lightyear = kilometer(9460730472580.8); 
-		const auto parsec = 3.2 * lightyear; // symbol: pc
+// Astronomical constants:
+CONST( AU,         149.5978707e6,   kilometer);
+CONST( lightyear,  9460730472580.8, kilometer); 
+CONST( parsec,     3.2 * lightyear, meter); // symbol: pc
+
+// Various constants:
+CONST( Marathon_length, 42195, meter);
+CONST( min_temperature,     0, kelvin);
 
 #if defined(__clang__) || defined(_MSC_VER)
     static constexpr auto ε_0  = 8.8541878e-12 * units::F / units::m; // electric constant (vacuum permittivity)
@@ -119,4 +121,6 @@ namespace si
     		const auto sin2θ_W  = 0.22290; // weak mixing angle
 #endif
 	}
-}	
+}
+
+#undef CONST

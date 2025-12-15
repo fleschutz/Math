@@ -1,13 +1,15 @@
 // SI/Mercury.hpp - contains physical characteristics of planet Mercury
 #pragma once
-
 #include "types.hpp"
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si
 {
 	namespace Mercury
 	{
-		const auto gravity = meters_per_second2(3.7); // surface gravity
-		const quantity human_population = 0; // as of 2025
+CONST( gravity,          3.7, meters_per_second2); // surface gravity
+CONST( human_population, 0,   quantity); // as of 2025
 	}
 }
+
+#undef CONST
