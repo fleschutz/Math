@@ -113,6 +113,5 @@ int main()
 	print(year, "is a Earth year");
 #endif
    }
-	si::unit_tests();
 	return 0;
 }

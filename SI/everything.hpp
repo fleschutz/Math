@@ -1,4 +1,4 @@
-// SI/everything.hpp - contains everything for convenience
+// SI/everything.hpp - contains all-in-one for convenience
 #pragma once
 #include "types.hpp"
 #include "prefixes.hpp"
@@ -13,3 +13,4 @@
 #include "Jupiter.hpp"
 
 #include "printer.hpp"
+#include "tests.hpp"
