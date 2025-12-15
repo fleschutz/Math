@@ -5,13 +5,7 @@ This repo supports type-safe programming with SI units and easy conversion to an
 which are **second** (symbol s, the unit of time), **metre** (m, length), **kilogram** (kg, mass), **ampere** (A, electric current), **kelvin** (K, thermodynamic temperature),
 **mole** (mol, amount of substance), and **candela** (cd, luminous intensity).
 
-Code Example
-------------
-```
-auto m = 1_kg;
-auto c = constant::speed_of_light;
-auto E = m * c * c;
-```
+
 
 Features
 --------
@@ -22,7 +16,16 @@ Features
 * Supports hundreds of usage examples
 * Supports unit tests to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
-  
+
+Example
+-------
+```
+auto m = 1_kg;
+auto c = constant::speed_of_light;
+auto E = m * c * c;
+```
+
+
 Folder Structure
 ----------------
 ```
