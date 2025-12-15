@@ -1,7 +1,7 @@
-Compiler Aided Math in C++
-==========================
+Compiler Aided Computations in C++
+==================================
 
-This repo supports type-safe programming with SI units and easy conversion to and from them. The SI comprises a coherent system of units of measurement starting with 7 base units,
+This repo supports type-safe computations with SI units and easy conversion to and from them. The SI comprises a coherent system of units of measurement starting with 7 base units,
 which are **second** (symbol s, the unit of time), **metre** (m, length), **kilogram** (kg, mass), **ampere** (A, electric current), **kelvin** (K, thermodynamic temperature),
 **mole** (mol, amount of substance), and **candela** (cd, luminous intensity).
 
@@ -14,6 +14,7 @@ Features
 * Supports hundreds of usage examples
 * Supports unit tests to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
+* Header only
 
 Example
 -------
