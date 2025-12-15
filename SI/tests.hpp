@@ -1,4 +1,4 @@
-// SI/test_literals.cpp - Unit tests of SI literals
+// SI/tests.hpp - Unit tests of SI literals
 #include <cassert>
 #include "literals.hpp"
 #include "Earth.hpp"
@@ -8,26 +8,28 @@ namespace si
 {
 	void unit_tests()
 	{
-		// Let's check the SI length:
+		// SI length checks:
 		static_assert(1_km == 1000_m);
 		static_assert(1_m == 10_dm);
 		static_assert(1_m == 100_cm);
 		static_assert(1_m == 1000_mm);
 		static_assert(1_m == 0.001_km);
-		// static_assert(1_m == 3.28084_ft);
 		static_assert(1_dm == 0.1_m);
 		static_assert(1_cm == 0.01_m);
 		static_assert(1_mm == 0.001_m);
 		static_assert(1_NM == 1852_m);
+		// static_assert(1_m == 3.28084_ft);
+
+		// SI time checks:
+		static_assert(1_week == 7_day);
+		static_assert(1_day == 24_h);
+		static_assert(1_h == 60_min);
+		static_assert(1_min == 60_s);
+		static_assert(1_s == 1000_ms);
+		static_assert(1_ms == 0.001_s);
 
 		// SI area:
 		static_assert(Earth::land_area + Earth::water_area == Earth::surface_area);
-
-		// Let's check the SI time:
-		static_assert(1_min == 60_s);
-		static_assert(1_h == 3600_s);
-		static_assert(1_s == 1000_ms);
-		static_assert(1_ms == 0.001_s);
 
 		// Let's check the speed:
 		static_assert(1_kmh == 3.6_mps);
@@ -36,7 +38,7 @@ namespace si
 		// Let's check the temperature:
 		// assert(0_K == -273.15_degC);
 
-		// Let's check the SI frequency:
+		// SI frequency checks:
 		static_assert(1_GHz == 1000000000_Hz);
 		static_assert(1_GHz == 1000_MHz);
 		static_assert(1_GHz == 1000000_kHz);
