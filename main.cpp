@@ -69,6 +69,10 @@ int main()
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
 	print(sum);
 } {
+	print("What's the sum of 1m + 1NM + 1ft? It's... ");
+	auto sum = 1_m + 1_NM + 1_ft;
+	print(sum);
+} {
 	print("What's the population density on Earth (people per km² of land area)? It's... ");
 	auto population_density = Earth::human_population / si::kilometer2(Earth::land_area);
 	print(population_density);
