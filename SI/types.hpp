@@ -707,14 +707,14 @@ namespace si
 	using detail::is_si;
 	using detail::is_si_v;
 
-#define SI_QUANTITY(name_, length_, mass_, time_, temperature_, angle_)											\
-	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, angle_>; }	\
-	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;					\
-	using name_ = name_ ## _t<double>;																			\
-	using name_ ## f = name_ ## _t<float>;																		\
-	using name_ ## 2 = name_ ## _t<detail::vec2<double>>;														\
-	using name_ ## 2f = name_ ## _t<detail::vec2<float>>;														\
-	using name_ ## 3 = name_ ## _t<detail::vec3<double>>;														\
+#define SI_QUANTITY(name_, length_, mass_, time_, temperature_, angle_)						\
+	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, angle_>; }\
+	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;		\
+	using name_ = name_ ## _t<double>;									\
+	using name_ ## f = name_ ## _t<float>;									\
+	using name_ ## 2 = name_ ## _t<detail::vec2<double>>;							\
+	using name_ ## 2f = name_ ## _t<detail::vec2<float>>;							\
+	using name_ ## 3 = name_ ## _t<detail::vec3<double>>;							\
 	using name_ ## 3f = name_ ## _t<detail::vec3<float>>															
 	SI_QUANTITY(angle, 0, 0, 0, 0, 1);
 
@@ -885,11 +885,12 @@ namespace si
 	}
 
 	typedef long double ampere;
-	typedef long double byte;
+	//typedef long double byte;
+	//typedef long double bytes_per_second;
+	inline constexpr auto byte = unit<detail::null_dimension>();
+	inline constexpr auto bytes_per_second = byte / second;
 	typedef long double quantity;
 	typedef long double lumens_per_watt;
-
-	void unit_tests(); // unit tests in SI/unit_tests.cpp
 }
 
 #if 0

@@ -90,6 +90,17 @@ LITERAL( ZB,   1e21,   byte);                // 7_ZB (zettabyte)
 LITERAL( YB,   1e24,   byte);                // 8_YB (yottabyte)
 LITERAL( RB,   1e27,   byte);                // 9_RB (ronnabyte)
 LITERAL( QB,   1e30,   byte);                // 10_QB (ronnabyte)
+
+LITERAL( KBps,  1e3,   bytes_per_second);    // 1_KBps (kilobyte/sec)
+LITERAL( MBps,  1e6,   bytes_per_second);    // 1_MBps (megabyte/sec)
+LITERAL( GBps,  1e9,   bytes_per_second);    // 1_GBps (gigabyte/sec)
+LITERAL( TBps, 1e12,   bytes_per_second);    // 1_TBps (terabyte/sec)
+
+LITERAL( Kbps,  1e3/8, bytes_per_second);    // 1_Kbps (kilobit/sec)
+LITERAL( Mbps,  1e6/8, bytes_per_second);    // 1_Mbps (megabit/sec)
+LITERAL( Gbps,  1e9/8, bytes_per_second);    // 1_Gbps (gigabit/sec)
+LITERAL( Tbps, 1e12/8, bytes_per_second);    // 1_Tbps (terabit/sec)
+					     //
 LITERAL( degC,    1,   celsius);             // 0_degC (degree celsius)
 LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
 LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)

@@ -12,10 +12,10 @@ namespace si
 			std::cout << year(t) << " year(s)" << std::endl;
 		else if (abs(t) >= week(1))
 			std::cout << week(t) << " week(s)" << std::endl;
-		else if (abs(t) >= day(1))
+		else if (abs(t) >= day(2))
 			std::cout << day(t) << " day(s)" << std::endl;
 		else if (abs(t) >= hour(1))
-			std::cout << hour(t) << " h" << std::endl;
+			std::cout << (int)hour(t) << "h " << ((int)minute(t)) % 60 << "min" << std::endl;
 		else if (abs(t) >= minute(1))
 			std::cout << minute(t) << " min" << std::endl;
 		else

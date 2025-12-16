@@ -118,6 +118,12 @@ int main()
 	auto deceleration = 6_mps2; // on wet asphalt
 	auto distance = formula::braking_distance(100_kmh, 0_kmh, deceleration);
 	print(distance);
+} {
+	print("What's the 1TB file download time via 100MBit? It's... ");
+	auto file_size = 1_TB;
+	auto DSL_speed = 100_Mbps;
+	auto time = file_size / DSL_speed;
+	print(time);
 #if 0
 	// Let's calculate the Earth year:
 	auto sunMass = Sun::mass;
