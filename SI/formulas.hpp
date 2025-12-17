@@ -9,49 +9,49 @@ namespace si
 	namespace formula
 	{
 
-		si::length circumference(si::length radius)
+		length circumference(length radius)
 		{
 			return 2.0 * M_PI * radius;
 		}
 
-		si::length radius_of_circumference(si::length circumference)
+		length radius_of_circumference(length circumference)
 		{
 			return circumference / (2.0 * M_PI);
 		}
 
-		si::area area_in_circle(si::length radius)
+		area area_in_circle(length radius)
 		{
 			return M_PI * radius * radius;
 		}
 
-		si::area area_of_ball(si::length radius)
+		area area_of_ball(length radius)
 		{
 			return 2.0 * M_PI * radius * radius;
 		}
 
-		si::volume volume_of_ball(si::length radius)
+		volume volume_of_ball(length radius)
 		{
 			return (4.0 / 3.0) * M_PI * radius * radius * radius;
 		}
 
 		// Returns the hypotenuse in a right triangle, based on Pythagorean equation a² + b² = c² 
-		si::length hypotenuse_in_triangle(si::length a, si::length b)
+		length hypotenuse_in_triangle(length a, length b)
 		{
 			return sqrt(a*a + b*b);
 		}
 
 		// Returns the kinetic energy of a non-rotating object of mass m traveling at speed v.
-		si::energy kinetic_energy(si::mass m, si::speed v)
+		energy kinetic_energy(mass m, speed v)
 		{
 			return 0.5 * m * v * v;
 		}
 
-		auto wavelength(si::speed v, si::frequency f)
+		length wavelength(speed v, frequency f)
 		{
 			return v / f;
 		}
 
-		auto Newtons_motion(si::length s0, si::speed v0, si::acceleration a, si::time t)
+		auto Newtons_motion(length s0, speed v0, acceleration a, time t)
 		{
 			return s0 + v0 * t + .5 * a * t * t;
 		}
@@ -67,27 +67,27 @@ namespace si
 		}
 #endif
 
-		si::time free_fall_time(si::height h, si::acceleration gravity)
+		time free_fall_time(height h, acceleration gravity)
 		{
 			return sqrt((2.0 * h) / gravity);
 		}
 
-		si::angle glide_path(si::length horizontal_distance, si::height vertical_change)
+		angle glide_path(length horizontal_distance, height vertical_change)
 		{
 			return atan2(vertical_change, horizontal_distance);
 		}
 
-		si::height vertical_height(si::angle glide_path, si::length horizontal_distance)
+		height vertical_height(angle glide_path, length horizontal_distance)
 		{
 			return horizontal_distance * tan(glide_path);
 		}
 
-		si::length braking_distance(si::speed from_speed, si::speed to_speed, si::acceleration deceleration)
+		length braking_distance(speed from_speed, speed to_speed, acceleration deceleration)
 		{
 			return (from_speed * from_speed - to_speed * to_speed) / (2.0 * deceleration);
 		}
 
-		si::acceleration acceleration_for_distance(si::speed current_speed, si::speed target_speed, si::length distance)
+		acceleration acceleration_for_distance(speed current_speed, speed target_speed, length distance)
 		{
 			return (target_speed * target_speed - current_speed * current_speed) / (2.0 * distance);
 		}

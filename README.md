@@ -8,11 +8,11 @@ Features
 * With type-safe [units](SI/types.hpp): Can't add a mass to a length
 * With type-safe [literals](SI/literals.hpp), e.g. 10_km
 * With type-safe [constants](SI/constants.hpp) (even Unicode symbols like π)
-* Supports SI base and derived units, Imperial units, and various more
+* With type-safe [formulas](SI/formulas.hpp) 
 * With hundreds of usage [examples](main.cpp)
 * With [unit tests](SI/tests.hpp) to check everything
-* No runtime overhead: Compiles to nothing but simple doubles
-* Header only, own namespace
+* Supports SI base and derived units, Imperial units, and various more
+* Header only, own namespace, no runtime overhead (compiles to nothing but simple doubles)
 
 Example
 -------
