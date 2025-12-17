@@ -95,6 +95,11 @@ namespace si
 			std::cout << joule(E) << " Joule " << std::endl;
 	}
 
+	void print(si::angle d)
+	{
+		std::cout << degree(d) << "° " << std::endl;
+	}
+
 	void print(si::quantity number)
 	{
 		std::cout << number << std::endl;

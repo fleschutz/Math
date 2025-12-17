@@ -61,23 +61,7 @@ LITERAL( Nm,    1,     newtonmeter);         // 2.1_Nm
 LITERAL( ha,    10000, meter2);              // 3_ha
 LITERAL( km2,   1,     kilometer2);	     // 7_km2
 
-// IMPERIAL UNITS
-//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
-LITERAL( degF,  1,     fahrenheit);          // 32_degF
-LITERAL( degR,  5/9,   kelvin);              // 60_degR
-LITERAL( ft,    .3048, meter);               // 5_ft
-LITERAL( in,    0.0254,meter);               // 9_in
-LITERAL( kn,    1'852.0, kilometers_per_hour); // 60_kn
-LITERAL( kt,    1'852.0, kilometers_per_hour); // 10_kt
-LITERAL( lb,    453.592'37, gram);           // 6_lb
-LITERAL( oz,    28.349'523'125, gram);       // 13_oz
-LITERAL( mi,    1'609.344, meter);           // 8_mi
-LITERAL( mph,   .44704,meters_per_second);   // 50_mph
-LITERAL( NM,    1852,  meter);               // 1_NM
-LITERAL( nmi,   1852,  meter);               // 1_nmi
-LITERAL( yd,    .9144, meter);               // 3_yd
-
-// VARIOUS UNITS
+// DIGITAL UNITS
 //     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
 LITERAL( byte,    1,   byte);                // 1_byte
 LITERAL( kB,    1e3,   byte);                // 1_kB (kilobyte)
@@ -100,7 +84,24 @@ LITERAL( Kbps,  1e3/8, bytes_per_second);    // 1_Kbps (kilobit/sec)
 LITERAL( Mbps,  1e6/8, bytes_per_second);    // 1_Mbps (megabit/sec)
 LITERAL( Gbps,  1e9/8, bytes_per_second);    // 1_Gbps (gigabit/sec)
 LITERAL( Tbps, 1e12/8, bytes_per_second);    // 1_Tbps (terabit/sec)
-					     //
+
+// IMPERIAL UNITS
+//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
+LITERAL( degF,  1,     fahrenheit);          // 32_degF
+LITERAL( degR,  5/9,   kelvin);              // 60_degR
+LITERAL( ft,    .3048, meter);               // 5_ft
+LITERAL( in,    0.0254,meter);               // 9_in
+LITERAL( kn,    1'852.0, kilometers_per_hour); // 60_kn
+LITERAL( kt,    1'852.0, kilometers_per_hour); // 10_kt
+LITERAL( lb,    453.592'37, gram);           // 6_lb
+LITERAL( oz,    28.349'523'125, gram);       // 13_oz
+LITERAL( mi,    1'609.344, meter);           // 8_mi
+LITERAL( mph,   .44704,meters_per_second);   // 50_mph
+LITERAL( NM,    1852,  meter);               // 1_NM (nautical mile)
+LITERAL( nmi,   1852,  meter);               // 1_nmi (nautical mile)
+LITERAL( yd,    .9144, meter);               // 3_yd (yard)
+
+// VARIOUS UNITS
 LITERAL( degC,    1,   celsius);             // 0_degC (degree celsius)
 LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
 LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)

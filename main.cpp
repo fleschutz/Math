@@ -122,6 +122,12 @@ int main()
 	auto DSL_speed = 100_Mbps;
 	auto time = file_size / DSL_speed;
 	print(time);
+} {
+	print("What's an aircraft's glide path on final at 10NM in 2000ft height? It's... ");
+	auto distance_on_final = 10_NM;
+	auto height_on_final = 2000_ft;
+	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
+	print(glide_path);
 #if 0
 	// Let's calculate the Earth year:
 	auto sunMass = Sun::mass;
