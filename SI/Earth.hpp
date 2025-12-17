@@ -1,6 +1,6 @@
 // SI/Earth.hpp - contains data of planet Earth
 #pragma once
-#include "types.hpp"
+#include "units.hpp"
 #define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si

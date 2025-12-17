@@ -5,7 +5,7 @@ This repo provides type-safe computations on arbitrary units and easy conversion
 
 Features
 --------
-* With type-safe [units](SI/types.hpp): Can't add a mass to a length
+* With type-safe [units](SI/units.hpp): Can't add a mass to a length
 * With type-safe [literals](SI/literals.hpp), e.g. 5_km or 24_h
 * With type-safe [constants](SI/constants.hpp), e.g. constant::sigma
 * With type-safe [formulas](SI/formulas.hpp), e.g. formula::circumference()
@@ -69,7 +69,7 @@ Folder Structure
   │  ├📄print.hpp - with a simple print to console interface 
   │  ├📄Sun.hpp - with physical characteristics of the Sun
   │  ├📄tests.hpp - with unit tests for basic tests
-  │  ├📄types.hpp - the basic SI types
+  │  ├📄units.hpp - the SI units
   ├📄CMakeLists.txt - the Makefile for cmake
   ├📄LICENSE - the CC0 license
   ├📄README.md - this README

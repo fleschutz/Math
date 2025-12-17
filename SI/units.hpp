@@ -1,4 +1,4 @@
-// SI/types.hpp - contains the SI types
+// SI/units.hpp - contains the SI units
 #pragma once
 
 #include <type_traits>

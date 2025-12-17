@@ -1,6 +1,6 @@
 // SI/Mercury.hpp - contains data of planet Mercury
 #pragma once
-#include "types.hpp"
+#include "units.hpp"
 #define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si

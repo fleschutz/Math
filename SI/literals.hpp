@@ -1,7 +1,7 @@
 // SI/literals.hpp - contains literals, e.g. 12_km (requires C++11 or higher)
 #pragma once
 
-#include "types.hpp"
+#include "units.hpp"
 
 namespace si
 {
