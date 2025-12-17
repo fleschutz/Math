@@ -1,4 +1,4 @@
-// SI/everything.hpp - includes any .hpp header file
+// SI/all.hpp - includes all .hpp header file (for convenience)
 #pragma once
 #include "types.hpp"
 #include "prefixes.hpp"

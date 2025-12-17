@@ -1,18 +1,18 @@
-Compiler-Aided Computations in C++
-==================================
+Compiler-Aided Math in C++
+==========================
 
-This repo supports type-safe computations on arbitrary units and easy conversion to and from them.
+This repo provides type-safe computations on arbitrary units and easy conversion to and from them.
 
 Features
 --------
 * Supports type checking: Can't add a mass to a length
 * Supports convenient literals, e.g. 10_km
-* Supports hundreds of constants
+* Supports hundreds of constants, even symbols like π
 * Supports SI base and derived units, Imperial units, and various more
 * Supports hundreds of usage examples
-* Supports unit tests to check everything
+* With unit tests to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
-* Header only
+* Header only, own namespace
 
 Example
 -------

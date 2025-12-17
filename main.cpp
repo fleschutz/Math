@@ -1,4 +1,4 @@
-#include "SI/everything.hpp"
+#include "SI/all.hpp"
 using namespace si;
 
 int main()
