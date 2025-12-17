@@ -74,7 +74,7 @@ namespace si
 
 		si::angle glide_path(si::length horizontal_distance, si::height vertical_change)
 		{
-			return atan2(horizontal_distance, vertical_change);
+			return atan2(vertical_change, horizontal_distance);
 		}
 
 		si::height vertical_height(si::angle glide_path, si::length horizontal_distance)
