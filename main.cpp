@@ -25,7 +25,7 @@ int main()
 	auto average = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
 	print(average);
 } {
-	print("What's the average temperature of 0°C + 32°F + 491.67°R + 273.15K? It's... ");
+	print("What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... ");
 	auto average = (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4;
 	print(average);
 } {
