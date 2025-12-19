@@ -1,7 +1,7 @@
-// SI/constants.hpp - contains type-safe constants in SI units
+// SI/constants.h - contains type-safe constants in SI units
 #pragma once
 
-#include "units.hpp"
+#include "units.h"
 
 namespace si
 {

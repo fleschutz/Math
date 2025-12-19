@@ -5,13 +5,13 @@ This repo provides type-safe computations on arbitrary units and easy conversion
 
 Features
 --------
-* With type-safe [units](SI/units.hpp): Can't add a mass to a length
-* With type-safe [literals](SI/literals.hpp), e.g. 5_km or 24_h
-* With type-safe [constants](SI/constants.hpp), e.g. constant::sigma
-* With type-safe [formulas](SI/formulas.hpp), e.g. formula::circumference()
-* With all 24 [SI prefixes](SI/prefixes.hpp), e.g. prefix::tera
-* With hundreds [usage examples](main.cpp)
-* With hundreds [unit tests](SI/tests.hpp) for safety
+* Type-safe [units](SI/units.h): Can't add a mass to a length
+* Type-safe [literals](SI/literals.h), e.g. 5_km or 24_h
+* Type-safe [constants](SI/constants.h), e.g. constant::sigma
+* Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
+* With all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
+* With hundreds of [examples](main.cpp)
+* With hundreds of [unit tests](SI/tests.h) for safety
 * Supports SI base and derived units, Imperial units, and various more
 * Header only, own namespace, no runtime overhead (compiles to nothing but simple doubles)
 
@@ -57,20 +57,20 @@ Folder Structure
 ----------------
 ```
   ├📂SI
-  │  ├📄all.hpp - includes any .hpp header file (for convenience)
-  │  ├📄constants.hpp - provides universal constants 
-  │  ├📄Earth.hpp - with characteristics of planet Earth
-  │  ├📄formulas.hpp - with common formulas
-  │  ├📄Jupiter.hpp - with physical characteristics of planet Jupiter
-  │  ├📄literals.hpp - with SI literals for convenience
-  │  ├📄Mars.hpp - with physical characteristics of planet Mars
-  │  ├📄Mercury.hpp - with physical characteristics of planet Mercury
-  │  ├📄Moon.hpp - with physical characteristics of the Moon
-  │  ├📄prefixes.hpp - with the SI prefixes
-  │  ├📄print.hpp - with a simple print to console interface 
-  │  ├📄Sun.hpp - with physical characteristics of the Sun
-  │  ├📄tests.hpp - with unit tests for basic tests
-  │  ├📄units.hpp - the SI units
+  │  ├📄all.h - includes any .h header file (for convenience)
+  │  ├📄constants.h - provides universal constants 
+  │  ├📄Earth.h - with characteristics of planet Earth
+  │  ├📄formulas.h - with common formulas
+  │  ├📄Jupiter.h - with physical characteristics of planet Jupiter
+  │  ├📄literals.h - with SI literals for convenience
+  │  ├📄Mars.h - with physical characteristics of planet Mars
+  │  ├📄Mercury.h - with physical characteristics of planet Mercury
+  │  ├📄Moon.h - with physical characteristics of the Moon
+  │  ├📄prefixes.h - with the SI prefixes
+  │  ├📄print.h - with a simple print to console interface 
+  │  ├📄Sun.h - with physical characteristics of the Sun
+  │  ├📄tests.h - with unit tests for basic tests
+  │  ├📄units.h - the SI units
   ├📄CMakeLists.txt - the Makefile for cmake
   ├📄LICENSE - the CC0 license
   ├📄README.md - this README

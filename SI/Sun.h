@@ -1,12 +1,13 @@
-// SI/Sun.hpp - contains data of the Sun
+// SI/Sun.h - contains data of the Sun
 #pragma once
-#include "units.hpp"
-#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
+
+#include "units.h"
 
 namespace si
 {
 	namespace Sun
 	{
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 CONST( equatorial_radius,        695'700'000, meter);
 CONST( equatorial_rotation_velocity,    1997, meters_per_second);
 CONST( equatorial_surface_gravity,       274, meters_per_second2);
@@ -22,7 +23,7 @@ CONST( center_temperature,        15'700'000, kelvin);
 CONST( photosphere_temperature,        5'772, kelvin);
 CONST( corona_temperature,         5'000'000, kelvin);
 CONST( human_population,                   0, quantity); // as of 2025
+#undef CONST
 	}
 }
 
-#undef CONST
