@@ -815,6 +815,7 @@ namespace si
 	inline constexpr auto megajoule = meganewton * meter;
 	inline constexpr auto gigajoule = giganewton * meter;
 
+	inline constexpr auto joulesecond = joule * second;
 	inline constexpr auto joules_per_kelvin = joule / kelvin;
 	inline constexpr auto meters_per_second2 = meter / (second * second);
 

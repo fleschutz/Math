@@ -12,7 +12,7 @@ namespace si
 // The 7 defining constants of SI:
 CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum
 CONST( c,              299'792'458, meters_per_second);
-//CONST( h,            6.62607e-34, units::J * units::s); // Planck constant
+CONST( h,              6.62607e-34, joulesecond); // Planck constant
 //CONST( e,           1.602176e-19, units::C); // elementary charge
 CONST( Δν_Cs,        9'192'631'770, hertz); // hyperfine transition frequency of cesium-133 (defines the SI second)
 CONST( k,            1.380'649e-23, joules_per_kelvin); // Boltzmann constant
@@ -24,7 +24,7 @@ CONST( K_cd,                   683, lumens_per_watt); // luminous efficacy of 54
 //CONST( epsilon_0    8.854'187'817'620'39e-12, units::F / units::m); // electric constant (vacuum permittivity)
 //CONST( mu_0        1.256'637'06e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
 //CONST( G               6.67408e-11, units::m3 / units::kg / units::s2); // Newtonian constant of gravitation
-//CONST( h_bar     1.054'571'817e-34, units::J * units::s); // reduced Planck constant
+CONST( h_bar,      1.054'571'817e-34, joulesecond); // reduced Planck constant
 
 // Electromagnetic constants
 //CONST( mu_B,         9.2740100e-24, units::J / units::T); // Bohr magneton
@@ -75,7 +75,7 @@ const auto m_u = kilogram(1.66053906e-27); // Atomic mass constant
 CONST( S_0_by_R,    -1.15170753706,  quantity); // Sackur–Tetrode constant
 
 // Adopted values
-//CONST( atm,    101325 * units::Pa; // standard atmosphere
+CONST( atm,             101325, pascal_); // standard atmosphere
    
 // Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
 CONST( speed_of_sound, 343,  meters_per_second); // speed of sound in air at 20 °C (68 °F)
@@ -84,21 +84,21 @@ CONST( g_0,              9.80665, meters_per_second2); // standard acceleration 
 //CONST( Gravitational_constant, 6.6743015e−11, * si::m3 / si::kilogram / si::s2);
 
 // Mathematical constants:  (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
-CONST( half_pi,             90, degree);
-CONST( pi,                 180, degree);
-CONST( π,                  180, degree);
-CONST( tau,                360, degree);
+CONST( half_pi,     M_PI / 2.0, quantity);
+CONST( pi,                M_PI, quantity);
+CONST( π,                 M_PI, quantity);
+CONST( tau,         2.0 * M_PI, quantity);
 
 #if defined(__clang__) || defined(_MSC_VER)
 CONST( ε_0,      8.8541878e-12, units::F / units::m); // electric constant (vacuum permittivity)
 CONST( μ_0,      1.25663706e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
-CONST( ℏ,      1.054571817e-34, units::J * units::s); // reduced Planck constant
 CONST( μ_B,      9.2740100e-24, units::J / units::T); // Bohr magneton
 CONST( Φ_0,    2.067833848e-15, units::Wb); // magnetic flux quantum
 CONST( μ_N,      5.0507837e-27, units::J / units::T); // nuclear magneton
 CONST( σ_e,      6.6524587e-29, units::m2); // Thomson cross section
 CONST( σ,       5.670374419e-8, units::W / units::m2 / units::K2); // Stefan–Boltzmann constant
 #endif
+CONST( ℏ,      1.054571817e-34, joulesecond); // reduced Planck constant
 CONST( α,         7.2973525e-3, quantity); // fine-structure constant
 CONST( α_inv,    137.035999084, quantity); // inverse fine-structure constant
 CONST( sin2θ_W,        0.22290, quantity); // weak mixing angle

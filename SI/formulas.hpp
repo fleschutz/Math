@@ -10,27 +10,27 @@ namespace si
 	{
 		length circumference(length radius)
 		{
-			return 2.0 * M_PI * radius;
+			return 2.0 * constant::pi * radius;
 		}
 
 		length radius_of_circumference(length circumference)
 		{
-			return circumference / (2.0 * M_PI);
+			return circumference / (2.0 * constant::pi);
 		}
 
 		area area_in_circle(length radius)
 		{
-			return M_PI * radius * radius;
+			return constant::pi * radius * radius;
 		}
 
 		area area_of_ball(length radius)
 		{
-			return 2.0 * M_PI * radius * radius;
+			return 2.0 * constant::pi * radius * radius;
 		}
 
 		volume volume_of_ball(length radius)
 		{
-			return (4.0 / 3.0) * M_PI * radius * radius * radius;
+			return (4.0 / 3.0) * constant::pi * radius * radius * radius;
 		}
 
 		// Returns the hypotenuse in a right triangle, based on Pythagorean equation a² + b² = c² 
@@ -52,7 +52,7 @@ namespace si
 
 		auto Newtons_motion(length s0, speed v0, acceleration a, time t)
 		{
-			return s0 + v0 * t + .5 * a * t * t;
+			return s0 + v0 * t + 0.5 * a * t * t;
 		}
 
 		auto Lorentz_force(double q, speed v, double B)
