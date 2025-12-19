@@ -1,4 +1,4 @@
-// SI/literals.hpp - contains literals, e.g. 12_km (requires C++11 or higher)
+// SI/literals.hpp - contains type-safe literals, e.g. 12_km (requires C++11 or higher)
 #pragma once
 
 #include "units.hpp"
