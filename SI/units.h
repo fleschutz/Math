@@ -1,4 +1,4 @@
-// SI/units.hpp - contains type-safe SI units
+// SI/units.h - contains type-safe SI units
 #pragma once
 
 #include <type_traits>

@@ -1,8 +1,8 @@
-// SI/print.hpp - simple print to console interface
+// SI/print.h - simple print to console interface
 #pragma once
 
 #include <iostream>
-#include "units.hpp"
+#include "units.h"
 
 namespace si
 {

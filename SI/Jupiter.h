@@ -1,6 +1,6 @@
-// SI/Jupiter.hpp - contains data of planet Jupiter
+// SI/Jupiter.h - contains data of planet Jupiter
 #pragma once
-#include "units.hpp"
+#include "units.h"
 #define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si

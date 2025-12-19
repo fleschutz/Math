@@ -1,7 +1,7 @@
-// SI/prefixes.hpp - contains the 24 SI prefixes as of 2022 
+// SI/prefixes.h - contains the 24 SI prefixes as of 2022 
 #pragma once
 
-#include "units.hpp"
+#include "units.h"
 
 namespace si
 {

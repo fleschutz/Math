@@ -1,7 +1,7 @@
-// SI/literals.hpp - contains type-safe literals, e.g. 12_km (requires C++11 or higher)
+// SI/literals.h - contains type-safe literals, e.g. 12_km (requires C++11 or higher)
 #pragma once
 
-#include "units.hpp"
+#include "units.h"
 
 namespace si
 {

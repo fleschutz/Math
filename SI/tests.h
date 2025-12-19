@@ -1,8 +1,9 @@
-// SI/tests.hpp - unit tests for safety
+// SI/tests.h - unit tests for safety
 #include <cassert>
-#include "literals.hpp"
-#include "prefixes.hpp"
-#include "Earth.hpp"
+#include "literals.h"
+#include "prefixes.h"
+#include "Earth.h"
+
 using namespace si;
 
 namespace si
