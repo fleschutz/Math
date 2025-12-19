@@ -1,4 +1,4 @@
-// SI/tests.hpp - Unit tests of SI literals
+// SI/tests.hpp - unit tests for safety
 #include <cassert>
 #include "literals.hpp"
 #include "prefixes.hpp"
@@ -7,7 +7,7 @@ using namespace si;
 
 namespace si
 {
-	void unit_tests()
+	void tests()
 	{
 		// SI length checks:
 		static_assert(1_km == 1000_m);

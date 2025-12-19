@@ -7,7 +7,6 @@
 #include <cmath>
 #include <algorithm>
 #include <charconv>
-
 #include "internal/vec.hpp"
 
 namespace si
@@ -32,17 +31,17 @@ namespace si
 			This template converts this concept into a C++ type.
 			In order to add a new exponent one has to update the three templates dimension, value_dimension and SI_DIMENSION_OP
 		*/
-		template <int Length, int Mass, int Time, int Temperature, int Angle>
+		template <long Length, long Mass, long Time, long Temperature, long Angle>
 		struct dimension
 		{
-			static constexpr int length = Length;
-			static constexpr int mass = Mass;
-			static constexpr int time = Time;
-			static constexpr int temperature = Temperature;
-			static constexpr int angle = Angle;
+			static constexpr long length = Length;
+			static constexpr long mass = Mass;
+			static constexpr long time = Time;
+			static constexpr long temperature = Temperature;
+			static constexpr long angle = Angle;
 		};
 
-		template <int Value>
+		template <long Value>
 		using value_dimension = dimension<Value, Value, Value, Value, Value>;
 
 		using null_dimension = value_dimension<0>;
@@ -58,7 +57,7 @@ namespace si
 			using type = null_dimension;
 		};
 
-		template <int Length, int Mass, int Time, int Temperature, int Angle>
+		template <long Length, long Mass, long Time, long Temperature, long Angle>
 		struct dimension_of<dimension<Length, Mass, Time, Temperature, Angle>>
 		{
 			using type = dimension<Length, Mass, Time, Temperature, Angle>;
@@ -216,7 +215,7 @@ namespace si
 			return x;
 		}
 
-		SI_INLINE_CONSTEXPR int value(zero_t)
+		SI_INLINE_CONSTEXPR long value(zero_t)
 		{
 			return 0;
 		}
@@ -414,7 +413,7 @@ namespace si
 			return quantity{ dimension<1, 0, 0, 0, 0>(), distance(value(a), value(b)) };
 		}
 
-		template <int Exponent, class Dimension, class T>
+		template <long Exponent, class Dimension, class T>
 		SI_INLINE auto pow(const quantity<Dimension, T>& x)
 		{
 			using std::pow;
@@ -422,7 +421,7 @@ namespace si
 			SI_RETURN_QUANTITY(result_dimension, pow(value(x), Exponent));
 		}
 
-		template <int Degree, class Dimension, class T>
+		template <long Degree, class Dimension, class T>
 		SI_INLINE auto root(const quantity<Dimension, T>& x)
 		{
 			using std::pow;
@@ -479,7 +478,7 @@ namespace si
 		template <class Dimension, class T> struct element_count<quantity<Dimension, T>> : element_count<T> {};
 
 		template <class T>
-		inline constexpr int element_count_v = element_count<T>::value;
+		inline constexpr long element_count_v = element_count<T>::value;
 
 		template <class Value, class Min, class Max>
 		SI_INLINE_CONSTEXPR auto clamp(const Value& x, const Min& min, const Max& max)
@@ -491,7 +490,7 @@ namespace si
 			SI_RETURN_QUANTITY(result_dimension, std::clamp(value(x), value(min), value(max)));
 		}
 
-		template <int Num, int Den>
+		template <long Num, long Den>
 		struct ratio
 		{
 			static constexpr auto factor = static_cast<double>(Num) / Den;
@@ -598,7 +597,7 @@ namespace si
 			}
 		};
 
-		template <class Dimension, int N>
+		template <class Dimension, long N>
 		struct unit<Dimension, ratio<N, N>>
 		{
 			template <class T, class = std::enable_if_t<is_arithmetic<T>::value>>
@@ -608,7 +607,7 @@ namespace si
 			}
 
 			// Special operator for constructing a SI quantity from a trivally constructible core::vec
-			template <int D, class T>
+			template <long D, class T>
 			SI_INLINE_CONSTEXPR auto operator()(const core::vec<D, core::detail::vec_trivally_constructible<T>>& value) const
 			{
 				SI_RETURN_QUANTITY(Dimension, core::vec<D, T>(value));
@@ -655,7 +654,7 @@ namespace si
 		template <class Ratio>
 		struct unit<null_dimension, Ratio> {};
 
-		template <int N>
+		template <long N>
 		struct unit<null_dimension, ratio<N, N>>
 		{
 			template <class T, class = std::enable_if_t<is_arithmetic<T>::value>>
@@ -682,7 +681,7 @@ namespace si
 
 	inline constexpr detail::zero_t zero;
 
-	template <class Dimension, int Numerator = 1, int Denumerator = 1>
+	template <class Dimension, long Numerator = 1, long Denumerator = 1>
 	using unit = detail::unit<detail::dimension_of_t<Dimension>, detail::ratio<Numerator, Denumerator>>;
 
 	using detail::abs;
@@ -743,10 +742,11 @@ namespace si
 	using position = length3;
 
 	// SI prefixes
+	inline constexpr auto tera  = unit<detail::null_dimension, 1000000000000>();
 	inline constexpr auto giga  = unit<detail::null_dimension, 1000000000>();
 	inline constexpr auto mega  = unit<detail::null_dimension, 1000000>();
-	inline constexpr auto hecto = unit<detail::null_dimension, 100>();
 	inline constexpr auto kilo  = unit<detail::null_dimension, 1000>();
+	inline constexpr auto hecto = unit<detail::null_dimension, 100>();
 	inline constexpr auto one   = unit<detail::null_dimension>();
 	inline constexpr auto centi = unit<detail::null_dimension, 1, 100>();
 	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
@@ -875,7 +875,7 @@ namespace si
 	template <class Dimension, class T>
 	std::from_chars_result from_chars(const char* first, const char* last, detail::quantity<Dimension, T>& q)
 	{
-		static constexpr int dimension[] = { Dimension::length, Dimension::mass, Dimension::time, Dimension::temperature, Dimension::angle };
+		static constexpr long dimension[] = { Dimension::length, Dimension::mass, Dimension::time, Dimension::temperature, Dimension::angle };
 
 		double x = {};
 		auto ret = detail::from_chars(first, last, dimension, x);
@@ -885,8 +885,6 @@ namespace si
 	}
 
 	typedef long double ampere;
-	//typedef long double byte;
-	//typedef long double bytes_per_second;
 	inline constexpr auto byte = unit<detail::null_dimension>();
 	inline constexpr auto bytes_per_second = byte / second;
 	typedef long double quantity;
