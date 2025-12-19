@@ -7,7 +7,7 @@ namespace si
 {
 	namespace constant
 	{
-#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
+#define CONST(_name, _value, _unit)  constexpr auto _name = _unit(_value)
 
 // The 7 defining constants of SI:
 CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum
@@ -20,7 +20,7 @@ CONST( k,            1.380'649e-23, joules_per_kelvin); // Boltzmann constant
 CONST( K_cd,                   683, lumens_per_watt); // luminous efficacy of 540 THz monochromatic radiation
 
 // Universal constants
-//CONST( Z_0,          376.730313667, units::Ohm); // characteristic impedance of vacuum
+CONST( Z_0,          376.730313667, ohm); // characteristic impedance of vacuum
 //CONST( epsilon_0    8.854'187'817'620'39e-12, units::F / units::m); // electric constant (vacuum permittivity)
 //CONST( mu_0        1.256'637'06e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
 //CONST( G               6.67408e-11, units::m3 / units::kg / units::s2); // Newtonian constant of gravitation

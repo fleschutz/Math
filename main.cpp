@@ -17,8 +17,8 @@ int main()
 } {
  	print("What's the kinetic energy of a car at 50 km/h? It's... ");
 	auto car_mass = 1300_kg;
-	auto normal_speed = 50_kmh;
-	auto KE = formula::kinetic_energy(car_mass, normal_speed);
+	auto city_speed_limit = 50_kmh;
+	auto KE = formula::kinetic_energy(car_mass, city_speed_limit);
 	print(KE);
 } {
 	print("What's the average speed here? It's... ");

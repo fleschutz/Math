@@ -811,9 +811,9 @@ namespace si
 	inline constexpr auto giganewton = giga * newton;
 
 	inline constexpr auto joule = newton * meter;
-	inline constexpr auto kilojoule = kilonewton * meter;
-	inline constexpr auto megajoule = meganewton * meter;
-	inline constexpr auto gigajoule = giganewton * meter;
+	inline constexpr auto kilojoule = kilo * joule;
+	inline constexpr auto megajoule = mega * joule;
+	inline constexpr auto gigajoule = giga * joule;
 
 	inline constexpr auto joulesecond = joule * second;
 	inline constexpr auto joules_per_kelvin = joule / kelvin;
@@ -904,6 +904,8 @@ namespace si
 	inline constexpr auto bytes_per_second = byte / second;
 	typedef long double quantity;
 	typedef long double lumens_per_watt;
+	typedef long double ohm;
+
 }
 
 #undef SI_RETURN_QUANTITY
