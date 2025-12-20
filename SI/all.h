@@ -5,12 +5,13 @@
 #include "constants.h"
 #include "formulas.h"
 #include "literals.h"
-
-#include "Sun.h"
-#include "Mercury.h"
-#include "Mars.h"
-#include "Earth.h"
-#include "Jupiter.h"
-
 #include "print.h"
 #include "tests.h"
+
+// values:
+#include "values/Sun.h"
+#include "values/Mercury.h"
+#include "values/Mars.h"
+#include "values/Earth.h"
+#include "values/Jupiter.h"
+#include "values/music.h"
