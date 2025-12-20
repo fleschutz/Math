@@ -1,7 +1,7 @@
 // SI/values/Earth.h - type-safe values of planet Earth as of 2025
 #pragma once
 
-#include "units.h"
+#include "../../SI/units.h"
 
 namespace si
 {
@@ -45,8 +45,8 @@ VALUE( Shishapangma_height,            8027, meter);
 VALUE( Gyachung_Kang_height,           7952, meter);
 VALUE( Gasherbrum_3_height,            7946, meter);
 VALUE( Annapurna_2_height,             7937, meter);
+VALUE( Zugspitze_height,               2962, meter);
 // ...
-VALUE(Zugspitze_height,                2962, meter);
 
 // Buildings: (source: https://en.wikipedia.org/wiki/List_of_tallest_buildings, sorted by height)
 VALUE( Burj_Khalifa_height,             828, meter);
@@ -60,11 +60,12 @@ VALUE( Guangzhou_CTF_height,            530, meter);
 VALUE( Tianjin_CTF_height,              530, meter);
 VALUE( China_Zun_height,                527.7, meter);
 VALUE( Taipei_101_height,               508, meter);
-// ...
 VALUE( Eiffel_Tower_height,             330, meter);
+// ...
 
 // Walls:
 VALUE( Great_Wall_in_China_length,     6430, kilometer); // (approximately)
+// ...
 
 #undef VALUE
 	}

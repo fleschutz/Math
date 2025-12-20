@@ -1,7 +1,7 @@
 // SI/values/Jupiter.h - type-safe values of planet Jupiter as of 2025
 #pragma once
 
-#include "units.h"
+#include "../../SI/units.h"
 
 namespace si
 {
@@ -19,6 +19,7 @@ VALUE( surface_gravity,               24.79, meters_per_second2);
 VALUE( equatorial_rotation_velocity, 12'600, meters_per_second);
 VALUE( satellites,                       97, quantity);
 VALUE( human_population,                  0, quantity);
+//...
 #undef CONST
 	}
 }

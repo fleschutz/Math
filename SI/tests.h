@@ -2,7 +2,7 @@
 #include <cassert>
 #include "literals.h"
 #include "prefixes.h"
-#include "Earth.h"
+#include "values/Earth.h"
 
 using namespace si;
 

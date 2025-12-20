@@ -1,7 +1,7 @@
 // SI/values/Mercury.h - type-safe values of planet Mercury as of 2025
 #pragma once
 
-#include "units.h"
+#include "../../SI/units.h"
 
 namespace si
 {
@@ -17,6 +17,7 @@ VALUE( surface_gravity,                3.7, meters_per_second2);
 VALUE( equatorial_rotation_velocity, 3.026, meters_per_second);
 VALUE( satellites,                       0, quantity);
 VALUE( human_population,                 0, quantity);
+//...
 #undef VALUE
 	}
 }

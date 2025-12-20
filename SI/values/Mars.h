@@ -1,7 +1,7 @@
 // SI/values/Mars.h - type-safe values of planet Mars as of 2025
 #pragma once
 
-#include "units.h"
+#include "../../SI/units.h"
 
 namespace si
 {
@@ -17,6 +17,7 @@ VALUE( surface_gravity,                3.72075, meters_per_second2);
 VALUE( equatorial_rotation_velocity, 241, meters_per_second);
 VALUE( satellites,                     2, quantity); // Phobos and Deimos
 VALUE( human_population,               0, quantity); 
+//...
 #undef VALUE
 	}
 }

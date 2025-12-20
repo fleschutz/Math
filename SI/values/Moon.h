@@ -1,7 +1,7 @@
 // SI/values/Moon.h - type-safe values of the Moon as of 2025
 #pragma once
 
-#include "units.h"
+#include "../../SI/units.h"
 
 namespace si
 {
@@ -20,6 +20,7 @@ VALUE( mass,                          7.346e22, kilogram);
 VALUE( surface_gravity,                  1.622, meters_per_second2);
 VALUE( equatorial_rotation_velocity,     4.627, meters_per_second);
 VALUE( human_population,                     0, quantity);
+//...
 #undef VALUE
 	}
 }

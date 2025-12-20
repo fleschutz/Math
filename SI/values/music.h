@@ -1,8 +1,7 @@
-// SI/values/music.h - type-safe values of music notes
+// SI/values/music.h - type-safe values of music notes as of 2025
 #pragma once
 
-#include "literals.h"
-
+#include "../../SI/literals.h"
 
 namespace si
 {
@@ -12,6 +11,7 @@ namespace si
 // 9 octaves from 0 to 8
 // 12 notes per octave: C, C#, D, D#, E, F, F#, G, G#, A, A#, B
 		NOTE(C, 0, 16.351_Hz, 20.812_m); // MIDI note # 12
+//...
 #undef NOTE
 	}
 }

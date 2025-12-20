@@ -1,7 +1,7 @@
 // SI/values/Sun.h - type-safe values of the Sun as of 2025
 #pragma once
 
-#include "units.h"
+#include "../../SI/units.h"
 
 namespace si
 {
@@ -23,6 +23,7 @@ VALUE( center_temperature,        15'700'000, kelvin);
 VALUE( photosphere_temperature,        5'772, kelvin);
 VALUE( corona_temperature,         5'000'000, kelvin);
 VALUE( human_population,                   0, quantity); 
+//...
 #undef VALUE
 	}
 }
