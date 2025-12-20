@@ -18,17 +18,17 @@ namespace si
 			return circumference / (2.0 * constant::pi);
 		}
 
-		area area_in_circle(length radius)
+		area circle_area(length radius)
 		{
 			return constant::pi * radius * radius;
 		}
 
-		area area_of_ball(length radius)
+		area ball_area(length radius)
 		{
 			return 2.0 * constant::pi * radius * radius;
 		}
 
-		volume volume_of_ball(length radius)
+		volume ball_volume(length radius)
 		{
 			return (4.0 / 3.0) * constant::pi * radius * radius * radius;
 		}
@@ -98,11 +98,5 @@ namespace si
 		{
 			return weight / (height * height);
 		}
-#if 0 // TODO
-		auto Kepler(mass m, length a)
-		{
-			return 4 * constant::pi * constant::pi * a*a*a / (constant::Gravity_constant * m );
-		}
-#endif
 	}
 }
