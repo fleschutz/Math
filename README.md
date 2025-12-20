@@ -10,6 +10,7 @@ Features
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
 * With all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
+* Type-safe values for planet [Earth](SI/Earth.h), the [Moon](SI/Moon.h), and more.
 * With hundreds of [examples](main.cpp)
 * With hundreds of [unit tests](SI/tests.h) for safety
 * Supports SI base and derived units, Imperial units, and various more
