@@ -22,7 +22,7 @@ auto m = 1_kg;
 auto c = constant::speed_of_light;
 auto E = m * c * c;
 ```
-Many more examples and the full code at [main.cpp](main.cpp)
+See many more examples and the full code at: [main.cpp](main.cpp)
 
 
 Program Output

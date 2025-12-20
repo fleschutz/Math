@@ -1,4 +1,4 @@
-// SI/literals.h - contains type-safe literals, e.g. 12_km (requires C++11 or higher)
+// SI/literals.h - type-safe literals, e.g. 12_km (requires C++11 or higher)
 #pragma once
 
 #include "units.h"
@@ -47,7 +47,7 @@ LITERAL( nA,    1e-9, ampere);              // 6_nA (nanoampere)
 LITERAL( pA,   1e-12, ampere);              // 7_pA (picoampere)
 
 // THE 22 SI DERIVED UNITS
-//     Symbol: Factor: Base Unit:           Example: (sorted alphabetically)
+//     Symbol: Factor: Base Unit:           Example:
 LITERAL( Bq,       1, hertz);               // 100_Bq (Bequerel)
 LITERAL( deg,      1, degree);              // 90_deg
 LITERAL( J,        1, joule);               // 1_J
@@ -87,7 +87,7 @@ LITERAL( TW,    1e12, joules_per_second);  // 1_TW (terawatt)
 LITERAL( mW,    1e-3, joules_per_second);  // 1_mW (milliwatt)
 
 // DIGITAL UNITS
-//     Symbol: Factor: Base Unit:           Example: (sorted alphabetically)
+//     Symbol: Factor: Base Unit:           Example:
 LITERAL( byte,     1, byte);                // 1_byte
 LITERAL( kB,     1e3, byte);                // 1_kB (kilobyte)
 LITERAL( MB,     1e6, byte);                // 2_MB (megabyte)
@@ -105,13 +105,13 @@ LITERAL( MBps,   1e6, bytes_per_second);    // 1_MBps (megabyte/sec)
 LITERAL( GBps,   1e9, bytes_per_second);    // 1_GBps (gigabyte/sec)
 LITERAL( TBps,  1e12, bytes_per_second);    // 1_TBps (terabyte/sec)
 
-LITERAL( Kbps,  1e3/8, bytes_per_second);    // 1_Kbps (kilobit/sec)
-LITERAL( Mbps,  1e6/8, bytes_per_second);    // 1_Mbps (megabit/sec)
-LITERAL( Gbps,  1e9/8, bytes_per_second);    // 1_Gbps (gigabit/sec)
-LITERAL( Tbps, 1e12/8, bytes_per_second);    // 1_Tbps (terabit/sec)
+LITERAL( Kbps, 1e3/8, bytes_per_second);    // 1_Kbps (kilobit/sec)
+LITERAL( Mbps, 1e6/8, bytes_per_second);    // 1_Mbps (megabit/sec)
+LITERAL( Gbps, 1e9/8, bytes_per_second);    // 1_Gbps (gigabit/sec)
+LITERAL( Tbps,1e12/8, bytes_per_second);    // 1_Tbps (terabit/sec)
 
 // IMPERIAL UNITS
-//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
+//     Symbol: Factor: Base Unit:            Example:
 LITERAL( degF,  1,     fahrenheit);          // 32_degF
 LITERAL( degR,  5/9,   kelvin);              // 60_degR
 LITERAL( ft,    .3048, meter);               // 5_ft
@@ -127,6 +127,7 @@ LITERAL( nmi,   1852,  meter);               // 1_nmi (nautical mile)
 LITERAL( yd,    .9144, meter);               // 3_yd (yard)
 
 // VARIOUS UNITS
+//     Symbol: Factor: Base Unit:            Example:
 LITERAL( degC,    1,   celsius);             // 0_degC (degree celsius)
 LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
 LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)
