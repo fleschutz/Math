@@ -110,9 +110,10 @@ LITERAL( yd,    .9144, meter);               // 3_yd (yard)
 // VARIOUS UNITS
 //     Symbol: Factor: Base Unit:            Example:
 LITERAL( degC,    1,   celsius);             // 0_degC (°Celsius)
-LITERAL( degR,  5/9,   kelvin);              // 60_degR (°Rankine)
-LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
-LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)
+LITERAL( degR,  5/9,   kelvin);              // 1_degR (°Rankine)
+LITERAL( Mach,  330,   meters_per_second);   // 2_Mach
+LITERAL( AU, 149'597'870'700, meter);        // 3_AU (astronomical unit)
+LITERAL( pc,3.085'677'581'28e16, meter);     // 4_pc (parsec)
 
 LITERAL( byte,     1, byte);                // 1_byte
 LITERAL( kB,     1e3, byte);                // 1_kB (kilobyte)
