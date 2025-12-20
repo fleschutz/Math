@@ -30,7 +30,6 @@ What's the average speed here? It's... 185765km/h
 What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 204.862°K
 What's the wavelength of H2 in vacuum? It's... 21.1061cm
 What's the free fall time from Burj Khalifa tower in Dubai? It's... 12.9948sec
-What's Markus BMI? OMG, it's... 24.9307
 What's a radar's geometrical horizon (the distance it can see)? It's... 10.7941km
 What's the time needed to fly non-stop around the Earth at Mach 1? It's... 33h 43min
 What's the travel time of sun light to Earth? It's... 8.31675min
@@ -47,6 +46,7 @@ What's a car's braking distance on dry asphalt from 100km/h? It's... 48.2253m
 What's a car's braking distance on wet asphalt from 100km/h? It's... 64.3004m
 How long takes a 1TB download at 100MBit speed? It's... 22h 13min
 What's the aircraft's glide path on final at 10NM distance in 3000ft height? It's... 2.82661°
+What's Markus body-mass index (BMI)? OMG, it's... 24.9307
 ```
 
 

@@ -39,12 +39,6 @@ int main()
 	auto time = formula::free_fall_time(tower_height, Earth::surface_gravity);
 	print(time);
 } {
-	print("What's Markus BMI? OMG, it's... ");
-	auto Markus_weight = 90_kg;
-	auto Markus_height = 190_cm;
-	auto BMI = formula::BMI(Markus_weight, Markus_height);
-	print(kilograms_per_meter2(BMI));
-} {
 	print("What's a radar's geometrical horizon (the distance it can see)? It's... ");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
@@ -128,6 +122,12 @@ int main()
 	auto height_on_final = 3000_ft;
 	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
 	print(glide_path);
+} {
+	print("What's Markus body-mass index (BMI)? OMG, it's... ");
+	auto Markus_weight = 90_kg;
+	auto Markus_height = 190_cm;
+	auto BMI = formula::BMI(Markus_weight, Markus_height);
+	print(kilograms_per_meter2(BMI));
 }
 	return 0;
 }
