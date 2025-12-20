@@ -30,13 +30,19 @@ LITERAL( day,24*3600,second);               // 1_day on Earth!
 LITERAL( week,  7*24*3600,second);          // 1_week on Earth!
 LITERAL( year,  365.25*24*3600,second);     // 1_year on Earth!
 
-LITERAL( kg,       1, kilogram);            // 10_kg
-LITERAL( g,     1e-3, kilogram);            // 3_g (gram)
+LITERAL( kg,       1, kilogram);            // 1_kg
+LITERAL( g,     1e-3, kilogram);            // 2_g (gram)
 LITERAL( mg,    1e-6, kilogram);            // 3_mg (milligram)
-LITERAL( μg,    1e-9, kilogram);            // 3_μg (microgram)
-LITERAL( t,      1e3, kilogram);            // 7_t (metric ton)
+LITERAL( μg,    1e-9, kilogram);            // 4_μg (microgram)
+LITERAL( t,      1e3, kilogram);            // 5_t (metric ton)
 
-LITERAL( K,        1, kelvin);              // 100_K
+LITERAL( K,        1, kelvin);              // 1_K
+LITERAL(kK,      1e3, kelvin);              // 2_kK
+LITERAL(MK,      1e6, kelvin);              // 3_MK
+LITERAL(GK,      1e9, kelvin);              // 4_GK
+LITERAL(mK,     1e-3, kelvin);              // 5_mK
+LITERAL(μK,     1e-6, kelvin);              // 6_μK
+LITERAL(nK,     1e-9, kelvin);              // 7_nK
 
 LITERAL( A,        1, ampere);              // 1_A 
 LITERAL( kA,     1e3, ampere);              // 2_kA (kiloampere)
@@ -86,8 +92,28 @@ LITERAL( GW,     1e9, joules_per_second);  // 1_GW (gigawatt)
 LITERAL( TW,    1e12, joules_per_second);  // 1_TW (terawatt)
 LITERAL( mW,    1e-3, joules_per_second);  // 1_mW (milliwatt)
 
-// DIGITAL UNITS
-//     Symbol: Factor: Base Unit:           Example:
+// IMPERIAL UNITS
+//     Symbol: Factor: Base Unit:            Example:
+LITERAL( degF,  1,     fahrenheit);          // 32_degF (°Fahrenheit)
+LITERAL( ft,    .3048, meter);               // 5_ft
+LITERAL( in,    0.0254,meter);               // 9_in
+LITERAL( kn,    1'852.0, kilometers_per_hour); // 60_kn
+LITERAL( kt,    1'852.0, kilometers_per_hour); // 10_kt
+LITERAL( lb,    453.592'37, gram);           // 6_lb
+LITERAL( oz,    28.349'523'125, gram);       // 13_oz
+LITERAL( mi,    1'609.344, meter);           // 8_mi
+LITERAL( mph,   .44704,meters_per_second);   // 50_mph
+LITERAL( NM,    1852,  meter);               // 1_NM (nautical mile)
+LITERAL( nmi,   1852,  meter);               // 1_nmi (nautical mile)
+LITERAL( yd,    .9144, meter);               // 3_yd (yard)
+
+// VARIOUS UNITS
+//     Symbol: Factor: Base Unit:            Example:
+LITERAL( degC,    1,   celsius);             // 0_degC (°Celsius)
+LITERAL( degR,  5/9,   kelvin);              // 60_degR (°Rankine)
+LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
+LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)
+
 LITERAL( byte,     1, byte);                // 1_byte
 LITERAL( kB,     1e3, byte);                // 1_kB (kilobyte)
 LITERAL( MB,     1e6, byte);                // 2_MB (megabyte)
@@ -109,28 +135,6 @@ LITERAL( Kbps, 1e3/8, bytes_per_second);    // 1_Kbps (kilobit/sec)
 LITERAL( Mbps, 1e6/8, bytes_per_second);    // 1_Mbps (megabit/sec)
 LITERAL( Gbps, 1e9/8, bytes_per_second);    // 1_Gbps (gigabit/sec)
 LITERAL( Tbps,1e12/8, bytes_per_second);    // 1_Tbps (terabit/sec)
-
-// IMPERIAL UNITS
-//     Symbol: Factor: Base Unit:            Example:
-LITERAL( degF,  1,     fahrenheit);          // 32_degF
-LITERAL( degR,  5/9,   kelvin);              // 60_degR
-LITERAL( ft,    .3048, meter);               // 5_ft
-LITERAL( in,    0.0254,meter);               // 9_in
-LITERAL( kn,    1'852.0, kilometers_per_hour); // 60_kn
-LITERAL( kt,    1'852.0, kilometers_per_hour); // 10_kt
-LITERAL( lb,    453.592'37, gram);           // 6_lb
-LITERAL( oz,    28.349'523'125, gram);       // 13_oz
-LITERAL( mi,    1'609.344, meter);           // 8_mi
-LITERAL( mph,   .44704,meters_per_second);   // 50_mph
-LITERAL( NM,    1852,  meter);               // 1_NM (nautical mile)
-LITERAL( nmi,   1852,  meter);               // 1_nmi (nautical mile)
-LITERAL( yd,    .9144, meter);               // 3_yd (yard)
-
-// VARIOUS UNITS
-//     Symbol: Factor: Base Unit:            Example:
-LITERAL( degC,    1,   celsius);             // 0_degC (degree celsius)
-LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
-LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)
 
 #undef LITERAL
 }

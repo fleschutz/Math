@@ -9,9 +9,9 @@ Features
 * Type-safe [literals](SI/literals.h), e.g. 5_km or 24_h
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
-* With all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
-* Type-safe values for planet [Earth](SI/Earth.h), the [Moon](SI/Moon.h), and more.
-* Supports SI base and derived units, Imperial units, and various more
+* Type-safe [values](SI/values/), e.g. for [Earth](SI/Earth.h), or [Moon](SI/Moon.h).
+* Supports SI base units, SI derived, Imperial, and various more.
+* Supports all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
 * Header only, own namespace, with [unit tests](SI/tests.h), no runtime overhead (compiles to nothing but simple doubles)
 
 Code Example
