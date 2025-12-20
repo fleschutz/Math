@@ -7,7 +7,7 @@
 #include <cmath>
 #include <algorithm>
 #include <charconv>
-#include "internal/vec.hpp"
+#include "internal.h"
 
 namespace si
 {
