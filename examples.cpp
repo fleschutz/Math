@@ -117,10 +117,10 @@ int main()
 	auto distance = formula::braking_distance(100_kmh, 0_kmh, deceleration);
 	print(distance);
 } {
-	print("What's the 1TB file download time via 100MBit? It's... ");
-	auto file_size = 1_TB;
-	auto DSL_speed = 100_Mbps;
-	auto time = file_size / DSL_speed;
+	print("How long takes a 1TB download at 100MBit speed? It's... ");
+	auto download_size  = 1_TB;
+	auto download_speed = 100_Mbps;
+	auto time = download_size / download_speed;
 	print(time);
 } {
 	print("What's the aircraft's glide path on final at 10NM distance in 3000ft height? It's... ");
@@ -128,14 +128,6 @@ int main()
 	auto height_on_final = 3000_ft;
 	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
 	print(glide_path);
-#if 0
-	// Let's calculate the Earth year:
-	auto sunMass = Sun::mass;
-	auto earthMass = Earth::mass;
-	auto sun_to_earth = constant::AU;
-	auto year = formula::Kepler(sunMass + earthMass, a);
-	print(year, "is a Earth year");
-#endif
-   }
+}
 	return 0;
 }
