@@ -81,7 +81,7 @@ Folder Structure
 
 Frequently Asked Questions
 --------------------------
-* **Isn't math boring?** No, the Nature, your car, your smartphone, even music is based on pure math.
+* **Isn't math boring?** No, the Nature, cars, planes, rockets, smartphones, even music are all based on pure math.
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
 * **Is this repo feature-complete?** No, absolutely not. Please help to add missing parts.
 

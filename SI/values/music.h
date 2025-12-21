@@ -7,11 +7,14 @@ namespace si
 {
 	namespace music // source: https://www.liutaiomottola.com/formulae/freqtab.htm
 	{
-#define NOTE(_name, _octave, _frequency, _wavelength)  static constexpr auto _name##_octave = _frequency
-// 9 octaves from 0 to 8
-// 12 notes per octave: C, C#, D, D#, E, F, F#, G, G#, A, A#, B
-		NOTE(C, 0, 16.351_Hz, 20.812_m); // MIDI note # 12
-//...
-#undef NOTE
+		// Human hearing range is 20 Hz to 20,000 Hz.
+		// 9 octaves from 0 to 8
+		// 12 notes per octave: C, C#, D, D#, E, F, F#, G, G#, A, A#, B
+		constexpr auto C0 = 16.351_Hz; // MIDI note # 12
+		constexpr auto Db0 = 17.324_Hz;
+		constexpr auto D0 = 18.354_Hz;
+		// ...
+		constexpr auto Bb9 = 14917.24_Hz;
+		constexpr auto B9 = 15804.264_Hz;
 	}
 }

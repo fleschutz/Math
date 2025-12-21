@@ -48,7 +48,11 @@ namespace si
 
 	void print(mass m)
 	{
-		if (abs(m) >= 1_t)
+		if (abs(m) >= 1_mt)
+			std::cout << (m / 1_mt) << "mt" << std::endl;
+		else if (abs(m) >= 1_kt)
+			std::cout << (m / 1_kt) << "kt" << std::endl;
+		else if (abs(m) >= 1_t)
 			std::cout << (m / 1_t) << "t" << std::endl;
 		else if (abs(m) >= 1_kg)
 			std::cout << (m / 1_kg) << "kg" << std::endl;
