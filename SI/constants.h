@@ -94,8 +94,12 @@ CONST( speed_of_sound_in_diamonds, 12'000, meters_per_second);
 // Mathematical constants:  (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
 CONST( pi,   3.14159265358979323846, quantity);
 CONST( half_pi,            pi / 2.0, quantity);
+CONST( quarter_pi,         pi / 4.0, quantity);
 UNICODE( π,                      pi, quantity);
-CONST( tau,                pi * 2.0, quantity);
+CONST( tau,  6.28318530717958647692, quantity);
+UNICODE( τ,                     tau, quantity);
+CONST( Eulers_number, 2.71828182845904523536,quantity);
+CONST( Phi,  1.61803398874989484820, quantity);
 
 //CONST( ε_0,      8.8541878e-12, units::F / units::m); // electric constant (vacuum permittivity)
 //CONST( μ_0,      1.25663706e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
