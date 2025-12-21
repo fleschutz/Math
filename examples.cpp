@@ -81,28 +81,28 @@ int main()
 	print("What's the surface area of a soccer ball? It's... ");
 	auto circumference = 70_cm; // (69-71cm for FIFA ball size 5)
 	auto radius = formula::radius_of_circumference(circumference);
-	auto area = formula::ball_area(radius);
+	auto area = formula::area_of_sphere(radius);
 	print(area);
 } {
 	print("What's the volume of a soccer ball? It's... ");
 	auto circumference = 70_cm; // (69-71cm for FIFA ball size 5)
 	auto radius = formula::radius_of_circumference(circumference);
-	auto volume = formula::ball_volume(radius);
+	auto volume = formula::volume_of_sphere(radius);
 	print(volume);
 } {
 	print("What's the surface area of a 30cm pizza? It's... ");
 	auto radius = 30_cm / 2;
-	auto area = formula::circle_area(radius);
+	auto area = formula::area_of_circle(radius);
 	print(area);
 } {
 	print("What's the volume of a 30cm x 1cm pizza? It's... ");
 	auto radius = 30_cm / 2; 
 	auto height = 1_cm;
-	auto volume = formula::circle_area(radius) * height;
+	auto volume = formula::area_of_circle(radius) * height;
 	print(volume);
 } {
 	print("What's the distance the Earth has travelled so far? It's... ");
-	auto distance_per_year = formula::circumference(constant::AU);
+	auto distance_per_year = formula::circumference_of_circle(constant::AU);
 	auto total = distance_per_year * (Earth::age / 1_year);
 	print(total);
 } {

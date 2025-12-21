@@ -8,7 +8,38 @@ namespace si
 {
 	namespace formula
 	{
-		length circumference(length radius)
+		// 2D Formulas
+		length perimeter_of_rectangle(length l, length b)
+		{
+			return 2.0 * (l + b);
+		}
+
+		area area_of_rectangle(length l, length b)
+		{
+			return l * b;
+		}
+
+		length perimeter_of_square(length a)
+		{
+			return 4.0 * a;
+		}
+
+		area area_of_square(length a)
+		{
+			return a * a;
+		}
+
+		area area_of_triangle(length b, length h)
+		{
+			return 0.5 * b * h;
+		}
+
+		area area_of_trapezoid(length b1, length b2, length h)
+		{
+			return 0.5 * (b1 + b2) * h;
+		}
+
+		length circumference_of_circle(length radius)
 		{
 			return 2.0 * constant::pi * radius;
 		}
@@ -18,17 +49,48 @@ namespace si
 			return circumference / (2.0 * constant::pi);
 		}
 
-		area circle_area(length radius)
+		area area_of_circle(length radius)
 		{
 			return constant::pi * radius * radius;
 		}
 
-		area ball_area(length radius)
+		// 3D Formulas
+		area area_of_cube(length a)
 		{
-			return 2.0 * constant::pi * radius * radius;
+			return 6.0 * a * a;
 		}
 
-		volume ball_volume(length radius)
+		volume volume_of_cube(length a)
+		{
+			return a * a * a;
+		}
+
+		area area_of_cylinder(length radius, length height)
+		{
+			return 2.0 * constant::pi * radius * (radius + height);
+		}
+
+		volume volume_of_cylinder(length radius, length height)
+		{
+			return constant::pi * radius * radius * height;
+		}
+
+		area area_of_cone(length radius, length height)
+		{
+			return constant::pi * radius * (radius + height);
+		}
+
+		volume volume_of_cone(length radius, length height)
+		{
+			return (1.0/3.0) * constant::pi * radius * radius * height;
+		}
+
+		area area_of_sphere(length radius)
+		{
+			return 4.0 * constant::pi * radius * radius;
+		}
+
+		volume volume_of_sphere(length radius)
 		{
 			return (4.0 / 3.0) * constant::pi * radius * radius * radius;
 		}
