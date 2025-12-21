@@ -17,12 +17,12 @@ int main()
 } {
  	print("What's the kinetic energy of a car at 50 km/h? It's... ");
 	auto car_mass = 1300_kg;
-	auto city_speed_limit = 50_kmh;
-	auto KE = formula::kinetic_energy(car_mass, city_speed_limit);
+	auto speed_limit = 50_kmh;
+	auto KE = formula::kinetic_energy(car_mass, speed_limit);
 	print(KE);
 } {
 	print("What's the average speed here? It's... ");
-	auto average = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
+	auto average = (330_mps + 1000_kmh + 300_kn + 7_mph + 1_Mach) / 5.0;
 	print(average);
 } {
 	print("What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... ");

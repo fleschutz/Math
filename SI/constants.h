@@ -92,10 +92,10 @@ CONST( speed_of_sound_in_iron, 5120, meters_per_second);
 CONST( speed_of_sound_in_diamonds, 12'000, meters_per_second);
 
 // Mathematical constants:  (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
-CONST( half_pi,     M_PI / 2.0, quantity);
-CONST( pi,                M_PI, quantity);
-UNICODE( π,               M_PI, quantity);
-CONST( tau,         2.0 * M_PI, quantity);
+CONST( pi,   3.14159265358979323846, quantity);
+CONST( half_pi,            pi / 2.0, quantity);
+UNICODE( π,                      pi, quantity);
+CONST( tau,                pi * 2.0, quantity);
 
 //CONST( ε_0,      8.8541878e-12, units::F / units::m); // electric constant (vacuum permittivity)
 //CONST( μ_0,      1.25663706e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
@@ -108,9 +108,9 @@ UNICODE( α,       7.2973525e-3, quantity); // fine-structure constant
 UNICODE( α_inv,  137.035999084, quantity); // inverse fine-structure constant
 UNICODE( sin2θ_W,      0.22290, quantity); // weak mixing angle
 
-// Astronomical constants:
-CONST( AU,     149'597'870'700, meter); // astronomical unit
-CONST( parsec, 3.085'677'581'28e16, meter); // Parsec (symbol: pc)
+// Astronomical constants: (source: https://en.wikipedia.org/wiki/Astronomical_constant)
+CONST( AU,               149'597'870'700, meter); // astronomical unit
+CONST( parsec,       3.085'677'581'28e16, meter); // Parsec (symbol: pc)
 CONST( lightyear,  9'460'730'472'580'800, meter); 
 //CONST( Hubble,  70.1 km s−1 Mpc−1); // symbol: H0
 

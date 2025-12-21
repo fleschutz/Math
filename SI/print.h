@@ -96,12 +96,14 @@ namespace si
 
 	void print(energy E)
 	{
-		if (abs(E) >= gigajoule(1))
-			std::cout << gigajoule(E) << " GJ " << std::endl;
-		else if (abs(E) >= megajoule(1))
-			std::cout << megajoule(E) << " MJ " << std::endl;
-		else if (abs(E) >= kilojoule(1))
-			std::cout << kilojoule(E) << " kJ " << std::endl;
+		if (abs(E) >= 1_TJ)
+			std::cout << (E / 1_TJ) << " TJ " << std::endl;
+		else if (abs(E) >= 1_GJ)
+			std::cout << (E / 1_GJ) << " GJ " << std::endl;
+		else if (abs(E) >= 1_MJ)
+			std::cout << (E / 1_MJ) << " MJ " << std::endl;
+		else if (abs(E) >= 1_kJ)
+			std::cout << (E / 1_kJ) << " kJ " << std::endl;
 		else
 			std::cout << joule(E) << " Joule " << std::endl;
 	}
