@@ -87,7 +87,7 @@ Frequently Asked Questions
 --------------------------
 * **Isn't math boring?** No, everything is applied math: the Nature, cars, planes, rockets, smartphones, even music.
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
-* **Is this repo feature-complete?** No, absolutely not. Please help to add missing parts.
+* **Is this repo feature-complete?** No, not yet. Please help to add missing parts.
 
 🤝 Contributing
 ---------------
