@@ -77,6 +77,9 @@ LITERAL( m3,       1, meter3);              // 1_m3
 LITERAL( cm3,      1, centimeter3);         // 1_cm3
 LITERAL( mm3,      1, millimeter3);         // 1_mm3
 
+LITERAL( kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m3
+LITERAL( t_per_m³, 1e3, kilograms_per_meter3);// 1_t_per_m3
+
 LITERAL( Hz,       1, hertz);               // 1_Hz
 LITERAL( kHz,    1e3, hertz);               // 2_kHz
 LITERAL( MHz,    1e6, hertz);               // 3_MHz
