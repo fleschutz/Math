@@ -46,10 +46,16 @@ namespace si
 			print(week(t), " week(s)");
 		else if (abs(t) >= day(2.0))
 			print(day(t), " day(s)");
-		else if (abs(t) >= hour(1.0))
-			std::cout << (int)hour(t) << "h " << ((int)minute(t)) % 60 << "min ";
+		else if (abs(t) >= 1_h)
+		{
+			print((int)(t / 1_h), "h");
+			print((int)(t / 1_min) % 60, "min");
+		}
 		else if (abs(t) >= 1_min)
-			print(t / 1_min, "min");
+		{
+			print((int)(t / 1_min), "min");
+			print((int)(t / 1_sec) % 60, "sec");
+		}
 		else if (abs(t) >= 1_sec)
 			print(t / 1_sec, "sec");
 		else if (abs(t) >= 1_ms)
