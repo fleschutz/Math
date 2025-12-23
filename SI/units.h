@@ -370,25 +370,6 @@ namespace si
 			using std::abs;
 			return { Dimension(), abs(value(x)) };
 		}
-#if 0
-		template <class Dimension, class T>
-		SI_INLINE_CONSTEXPR auto sign(const quantity<Dimension, T>& x)
-		{
-			using core::sign;
-			return sign(value(x));
-		}
-		template <class Dimension, class T>
-		SI_INLINE_CONSTEXPR bool isnan(const quantity<Dimension, T>& x)
-		{
-			return ::isnan(value(x));
-		}
-
-		template <class Dimension, class T>
-		SI_INLINE_CONSTEXPR bool isinf(const quantity<Dimension, T>& x)
-		{
-			return ::isinf(value(x));
-		}
-#endif
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
 		SI_INLINE_CONSTEXPR auto dot(const Lhs& lhs, const Rhs& rhs)
@@ -700,11 +681,6 @@ namespace si
 	using detail::dot;
 	using detail::clamp;
 	using detail::deangle;
-#if 0
-	using detail::sign;
-	using detail::isnan;
-	using detail::isinf;
-#endif
 	using detail::is_si;
 	using detail::is_si_v;
 
@@ -760,11 +736,11 @@ namespace si
 	inline constexpr auto femto = unit<detail::null_dimension, 1, 1000000000000000>();
 
 	// The 7 SI base units:
-	inline constexpr auto meter      = unit<length>();
-	inline constexpr auto kilometer  = kilo * meter; 
-	inline constexpr auto centimeter = centi * meter;
-	inline constexpr auto millimeter = milli * meter;
-	inline constexpr auto micrometer = micro * meter;
+	inline constexpr auto meter       = unit<length>();
+	inline constexpr auto kilometer   = kilo * meter; 
+	inline constexpr auto centimeter  = centi * meter;
+	inline constexpr auto millimeter  = milli * meter;
+	inline constexpr auto micrometer  = micro * meter;
 
 	inline constexpr auto second      = unit<time>();
 	inline constexpr auto minute      = unit<time, 60>();
@@ -776,15 +752,15 @@ namespace si
 	inline constexpr auto microsecond = micro * second;
 	inline constexpr auto nanosecond  = nano * second;
 
-	inline constexpr auto kilogram  = unit<mass>();
-	inline constexpr auto ton       = kilo * kilogram;
-	inline constexpr auto gram      = milli * kilogram;
-	inline constexpr auto milligram = micro * kilogram;
-	inline constexpr auto microgram = nano * kilogram;
+	inline constexpr auto kilogram    = unit<mass>();
+	inline constexpr auto ton         = kilo * kilogram;
+	inline constexpr auto gram        = milli * kilogram;
+	inline constexpr auto milligram   = micro * kilogram;
+	inline constexpr auto microgram   = nano * kilogram;
 
-	inline constexpr auto kelvin = unit<temperature>();
-	inline constexpr auto megakelvin = mega * kelvin;
-	inline constexpr auto gigakelvin = giga * kelvin;
+	inline constexpr auto kelvin      = unit<temperature>();
+	inline constexpr auto megakelvin  = mega * kelvin;
+	inline constexpr auto gigakelvin  = giga * kelvin;
 	inline constexpr auto millikelvin = milli * kelvin;
 
 	typedef long double volt;
@@ -792,100 +768,79 @@ namespace si
 	typedef long double ohm;
 
 	// The 22 SI derived units:
-	inline constexpr auto meter2 = unit<area>();
-	inline constexpr auto kilometer2 = kilo * kilo * meter2;
+	inline constexpr auto meter2      = unit<area>();
+	inline constexpr auto kilometer2  = kilo * kilo * meter2;
 	inline constexpr auto centimeter2 = centi * centi * meter2;
 	inline constexpr auto millimeter2 = milli * milli * meter2;
 
-	inline constexpr auto meter3 = unit<volume>();
-	inline constexpr auto kilometer3 = kilo * kilo * kilo * meter3;
+	inline constexpr auto meter3      = unit<volume>();
+	inline constexpr auto kilometer3  = kilo * kilo * kilo * meter3;
 	inline constexpr auto centimeter3 = centi * centi * centi * meter3;
 	inline constexpr auto millimeter3 = milli * milli * milli * meter3;
 
 	inline constexpr auto meters_per_second = meter / second;
 	inline constexpr auto kilometers_per_hour = kilometer / hour;
+	inline constexpr auto millimeters_per_hour = millimeter / hour;
 
 	inline constexpr auto meters_per_second2 = meter / (second * second);
 
 	inline constexpr auto kilograms_per_meter2 = kilogram / (meter * meter);
 	inline constexpr auto kilograms_per_meter3 = kilogram / (meter * meter * meter);
 
-	inline constexpr auto hertz = unit<frequency>();
-	inline constexpr auto kilohertz = kilo * hertz;
-	inline constexpr auto megahertz = mega * hertz;
-	inline constexpr auto gigahertz = giga * hertz;
-	inline constexpr auto terahertz = tera * hertz;
+	inline constexpr auto hertz       = unit<frequency>();
+	inline constexpr auto kilohertz   = kilo * hertz;
+	inline constexpr auto megahertz   = mega * hertz;
+	inline constexpr auto gigahertz   = giga * hertz;
+	inline constexpr auto terahertz   = tera * hertz;
 
-	inline constexpr auto newton = kilogram * meter / (second * second);
-	inline constexpr auto kilonewton = kilo * newton;
-	inline constexpr auto meganewton = mega * newton;
-	inline constexpr auto giganewton = giga * newton;
+	inline constexpr auto newton      = kilogram * meter / (second * second);
+	inline constexpr auto kilonewton  = kilo * newton;
+	inline constexpr auto meganewton  = mega * newton;
+	inline constexpr auto giganewton  = giga * newton;
 
-	inline constexpr auto joule = newton * meter;
-	inline constexpr auto kilojoule = kilo * joule;
-	inline constexpr auto megajoule = mega * joule;
-	inline constexpr auto gigajoule = giga * joule;
+	inline constexpr auto joule       = newton * meter;
+	inline constexpr auto kilojoule   = kilo * joule;
+	inline constexpr auto megajoule   = mega * joule;
+	inline constexpr auto gigajoule   = giga * joule;
 
 	inline constexpr auto joulesecond = joule * second;
 	inline constexpr auto joules_per_kelvin = joule / kelvin;
 	inline constexpr auto joules_per_second = joule / second;
 	inline constexpr auto joules_per_second_per_kilogram = joule / second / kilogram;
 
-	inline constexpr auto pascal_ = newton / (meter * meter);
+	inline constexpr auto pascal_     = newton / (meter * meter);
 	inline constexpr auto hectopascal = hecto * pascal_;
-	inline constexpr auto millibar = hectopascal;
-	inline constexpr auto bar = hecto * kilo * pascal_;
+	inline constexpr auto millibar    = hectopascal;
+	inline constexpr auto bar         = hecto * kilo * pascal_;
 
 	inline constexpr auto newtonmeter = newton * meter;
-	inline constexpr auto newtonsecond = newton * second;
+	inline constexpr auto newtonsecond= newton * second;
 
 	// Imperial Units:
-	inline constexpr auto pound = unit<mass, 45359237, 100000000>();
-	inline constexpr auto feet = unit<length, 3048, 10000>();
-	inline constexpr auto nautical_mile = unit<length, 185318, 100>(); // !!! this is NOT the correct factor, but for sake of compatibility this value from TowMacros.h is used !!!
-	//inline constexpr auto nautical_mile = unit<length, 1852>(); // !!! this is NOT the value used by TowMacros.h but the correct factor !!!
-	inline constexpr auto inch = unit<length, 254, 10000>();
+	inline constexpr auto pound       = unit<mass, 45359237, 100000000>();
+	inline constexpr auto feet        = unit<length, 3048, 10000>();
+	inline constexpr auto nautical_mile = unit<length, 1852, 100>();
+	inline constexpr auto inch        = unit<length, 254, 10000>();
 	inline constexpr auto statute_mile = unit<length, 1609344, 1000>(); // that's the "international mile", the U.S. survey mile is about 1609.347218694 metres (sigh)
-	inline constexpr auto fahrenheit = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
+	inline constexpr auto fahrenheit  = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
 	inline constexpr auto miles_per_hour = statute_mile / hour;
-
-	// Knots are "nautical_mile / hour", but we cannot use nautical_mile because those are incorrect (see note above)
-	// Here, we have to use the correct factor of 1852 m / 3600 s = 0.5144444 m/s (which is what ExEngine MS2KTS uses)
-	// inline constexpr auto knots = nautical_mile / hour;
-	inline constexpr auto knots = unit<speed, 1852, 3600>();
-
+	inline constexpr auto knots       = nautical_mile / hour;
 	inline constexpr auto feet_per_minute = feet / minute;
-	inline constexpr auto millimeters_per_hour = millimeter / hour;
 	inline constexpr auto inches_per_hour = inch / hour;
 
-	//@{
-	/**
-		Because of the different zero points, care has to be taken when using temperature in calculations.
+	inline constexpr auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
 
-		In particular:
-		- 'si::celsius(a / b)' IS NOT EQUAL TO 'si::celsius(a) / si::celsius(b)'
-		- [...]
-	*/
-	inline constexpr auto celsius = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
-	//@}
-
-	inline constexpr auto radian = unit<angle>();
-	inline constexpr auto degree = detail::unit<detail::angle_dimension, detail::ratio_degree>();
+	inline constexpr auto radian      = unit<angle>();
+	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
 	inline constexpr auto radians_per_second = unit<angular_speed>();
 	inline constexpr auto degrees_per_second = degree / second;
 
-	//inline constexpr auto per_minute = one / minute;
-
-	// Declaring the following constants constexpr somehow caused si functions to show up in completely unrelated template error diagnostics
-
-
-	inline constexpr auto byte = unit<detail::null_dimension>();
+	inline constexpr auto byte        = unit<detail::null_dimension>();
 	inline constexpr auto bytes_per_second = byte / second;
 
-	typedef long double mol;
-	typedef long double lumens_per_watt;
-	typedef long double ohm;
-
+	typedef long double mol; // TODO
+	typedef long double lumens_per_watt; // TODO
+	typedef long double ohm; // TODO
 }
 
 #undef SI_RETURN_QUANTITY
