@@ -12,5 +12,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(examples examples.cpp)
 
+enable_testing()
+add_test(NAME examples COMMAND examples)
+
 install(TARGETS examples DESTINATION . )
 
