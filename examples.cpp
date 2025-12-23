@@ -131,8 +131,8 @@ int main()
 	print("What's Donald Trump's body-mass index (BMI)? It's... ");
 	auto Donalds_weight = 102_kg;
 	auto Donalds_height = 190_cm;
-	auto BMI = formula::BMI(Donalds_weight, Donalds_height);
-	print(kilograms_per_meter2(BMI));
+	auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
+	print(Donalds_BMI);
 } {
 	print("What are the details of a 10m x 1m oak tree log? It's... ");
 	auto log_length = 10_m;

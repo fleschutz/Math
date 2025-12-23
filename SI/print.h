@@ -169,6 +169,11 @@ namespace si
 		std::cout << degree(a) << "° ";
 	}
 
+	void print(BMI v)
+	{
+		print(v / 1_kg_per_m², " BMI");
+	}
+
 	void print(area a, volume v, mass m)
 	{
 		print(a); print(v); print(m);

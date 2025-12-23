@@ -10,7 +10,7 @@ Features
 * Type-safe [units](SI/units.h): Can't add a mass to a length
 * Type-safe and prefix-safe [literals](SI/literals.h), e.g. 24_h or 3_GWh
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
-* Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
+* Type-safe [formulas](SI/formulas.h), e.g. formula::wavelength()
 * Type-safe [values](SI/values/), e.g. for planet [Earth](SI/values/Earth.h) or the [Moon](SI/values/Moon.h).
 * Supports SI base units, SI derived units, Imperial units, and many more.
 * Platform-independant, requires C++11 or higher, tested with VS2017, gcc 15.2, and clang 20.1.8.
@@ -29,7 +29,7 @@ See all examples in [examples.cpp](examples.cpp). Executing: `cmake . && make &&
 What's the average speed of Kiptum's world record in Marathon? It's...21.0975km/h
 What's the potential energy of 1kg mass? It's... 89875.5TJ
 What's the kinetic energy of a car at 50 km/h? It's... 125.386kJ
-What's the average speed here? It's... 111797km/h
+What's the average speed here? It's... 1002km/h
 What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 273.15K
 What's the wavelength of H2 in vacuum? It's... 21.1061cm
 What's the wavelength of the high 'c' music note? It's... 32.7759cm

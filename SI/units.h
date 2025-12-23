@@ -693,7 +693,7 @@ namespace si
 	using name_ ## 2f = name_ ## _t<detail::vec2<float>>;							\
 	using name_ ## 3 = name_ ## _t<detail::vec3<double>>;							\
 	using name_ ## 3f = name_ ## _t<detail::vec3<float>>															
-	// The 7 SI base units:  L  M  T  t  a
+	// The 7 SI base units:  l  m  t  T  ° 
 	SI_QUANTITY(length,      1, 0, 0, 0, 0);
 	SI_QUANTITY(mass,        0, 1, 0, 0, 0);
 	SI_QUANTITY(time,        0, 0, 1, 0, 0);
@@ -712,10 +712,11 @@ namespace si
 	SI_QUANTITY(pressure,   -1, 1, -2, 0, 0);
 	SI_QUANTITY(energy,      2, 1, -2, 0, 0);
 	SI_QUANTITY(torque,      2, 1, -2, 0, 0);
-	SI_QUANTITY(power,       2, 1,- 3, 0, 0);
+	SI_QUANTITY(power,       2, 1, -3, 0, 0);
 	SI_QUANTITY(area,        2, 0,  0, 0, 0); // (length²)
 	SI_QUANTITY(volume,      3, 0,  0, 0, 0); // (length³)
 	SI_QUANTITY(density,    -3, 1,  0, 0, 0);
+	SI_QUANTITY(BMI,        -2, 1,  0, 0, 0); // (mass per length²)
 	//...
 
 	using position2d = length2;

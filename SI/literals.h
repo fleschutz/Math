@@ -78,6 +78,7 @@ LITERAL( m³,       1, meter3);              // 1_m³
 LITERAL( cm³,   1e-6, meter3);              // 1_cm³
 LITERAL( mm³,   1e-9, meter3);              // 1_mm³
 
+LITERAL( kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
 LITERAL( kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
 LITERAL( t_per_m³, 1e3, kilograms_per_meter3);// 1_t_per_m³
 
