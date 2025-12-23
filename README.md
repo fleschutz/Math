@@ -3,7 +3,7 @@
 Type-safe Math in C++
 =====================
 
-This Math lib helps to apply mathematics correct, with high precision, and as easy as possible. It provides type-safe computations on arbitrary units and easy conversion to and from them.
+This Math lib helps to apply mathematics correct, with high precision and as easy as possible. It provides type-safe computations on arbitrary units and easy conversion to and from them.
 
 Features
 --------
@@ -11,9 +11,9 @@ Features
 * Type-safe and prefix-safe [literals](SI/literals.h), e.g. 24_h or 3_GWh
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
-* Type-safe [values](SI/values/), e.g. for planet [Earth](SI/Earth.h) or the [Moon](SI/Moon.h).
+* Type-safe [values](SI/values/), e.g. for planet [Earth](SI/values/Earth.h) or the [Moon](SI/values/Moon.h).
 * Supports SI base units, SI derived units, Imperial units, and many more.
-* Platform-independant, tested with VS2017, gcc 15.2, clang 20.1.8
+* Platform-independant, requires C++11 or higher, tested with VS2017, gcc 15.2, and clang 20.1.8.
 * Header only, own namespace, with [unit tests](SI/tests.h), no runtime overhead (compiles to nothing but simple doubles)
 
 Code Example
