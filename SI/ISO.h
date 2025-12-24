@@ -9,7 +9,7 @@ namespace si
 	{
 #define SET(_name, _value, _unit) const auto _name = _unit(_value)
 
-// ISO 216 Paper Sizes:
+// ISO 216 - Paper Sizes
 SET( paper_A0_with,              841, millimeter);
 SET( paper_A0_height,           1189, millimeter);
 SET( paper_A1_with,              594, millimeter);
@@ -32,6 +32,13 @@ SET( paper_A9_with,               37, millimeter);
 SET( paper_A9_height,             52, millimeter);
 SET( paper_A10_width,             26, millimeter);
 SET( paper_A10_height,            37, millimeter);
+//...
+
+// ISO 668 - Series 1 freight containers
+SET( container_1AA_ext_length,     12.192, meter); // (aka 40-foot standard)
+SET( container_1AA_ext_height,      2.591, meter);
+SET( container_1AA_ext_width,       2.438, meter);
+SET( container_1AA_max_gross_mass, 36'000, kilogram);
 //...
 
 #undef SET
