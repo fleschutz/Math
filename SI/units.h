@@ -723,9 +723,9 @@ namespace si
 	using position = length3;
 
 	// SI prefixes:
-	inline constexpr auto exa   = unit<detail::null_dimension, 1000000000000000000>();
-	inline constexpr auto peta  = unit<detail::null_dimension, 1000000000000000>();
-	inline constexpr auto tera  = unit<detail::null_dimension, 1000000000000>();
+	//inline constexpr auto exa   = unit<detail::null_dimension, 1000000000000000000>();
+	//inline constexpr auto peta  = unit<detail::null_dimension, 1000000000000000>();
+	//inline constexpr auto tera  = unit<detail::null_dimension, 1000000000000>();
 	inline constexpr auto giga  = unit<detail::null_dimension, 1000000000>();
 	inline constexpr auto mega  = unit<detail::null_dimension, 1000000>();
 	inline constexpr auto kilo  = unit<detail::null_dimension, 1000>();
@@ -735,8 +735,8 @@ namespace si
 	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
 	inline constexpr auto micro = unit<detail::null_dimension, 1, 1000000>();
 	inline constexpr auto nano  = unit<detail::null_dimension, 1, 1000000000>();
-	inline constexpr auto pico  = unit<detail::null_dimension, 1, 1000000000000>();
-	inline constexpr auto femto = unit<detail::null_dimension, 1, 1000000000000000>();
+	//inline constexpr auto pico  = unit<detail::null_dimension, 1, 1000000000000>();
+	//inline constexpr auto femto = unit<detail::null_dimension, 1, 1000000000000000>();
 
 	// The 7 SI base units:
 	inline constexpr auto meter       = unit<length>();
@@ -795,7 +795,6 @@ namespace si
 	inline constexpr auto kilohertz   = kilo * hertz;
 	inline constexpr auto megahertz   = mega * hertz;
 	inline constexpr auto gigahertz   = giga * hertz;
-	inline constexpr auto terahertz   = tera * hertz;
 
 	inline constexpr auto newton      = kilogram * meter / (second * second);
 	inline constexpr auto kilonewton  = kilo * newton;

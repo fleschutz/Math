@@ -108,30 +108,31 @@ LITERAL( μV,    1e-6, volt);                // 1_μV (microvolt)
 LITERAL( nV,    1e-9, volt);                // 1_nV (nanovolt)
 LITERAL( pV,   1e-12, volt);                // 1_pV (picovolt)
 // electric resistance in...
-LITERAL( GΩ,     1e9, ohm);                // 1_GΩ (gigaohm)
-LITERAL( MΩ,     1e6, ohm);                // 1_MΩ (megaohm)
-LITERAL( kΩ,     1e3, ohm);                // 1_kΩ (kiloohm)
-LITERAL( Ω,        1, ohm);                // 1_Ω
-LITERAL( mΩ,    1e-3, ohm);                // 1_mΩ (milliohm)
+LITERAL( GOhm,   1e9, ohm);                 // 1_GOhm (gigaohm)
+LITERAL( MOhm,   1e6, ohm);                 // 1_MOhm (megaohm)
+LITERAL( kOhm,   1e3, ohm);                 // 1_kOhm (kiloohm)
+LITERAL( Ohm,      1, ohm);                 // 1_Ohm
+LITERAL( mOhm,  1e-3, ohm);                 // 1_mOhm (milliohm)
+LITERAL( μOhm,  1e-6, ohm);                 // 1_μOhm (microohm)
 // energy in...
-LITERAL( TJ,    1e12, joule);              // 1_TJ (terajoule)
-LITERAL( GJ,     1e9, joule);              // 1_GJ (gigajoule)
-LITERAL( MJ,     1e6, joule);              // 1_MJ (megajoule)
-LITERAL( kJ,     1e3, joule);              // 1_kJ (kilojoule)
-LITERAL( J,        1, joule);              // 1_J (joule)
+LITERAL( TJ,    1e12, joule);               // 1_TJ (terajoule)
+LITERAL( GJ,     1e9, joule);               // 1_GJ (gigajoule)
+LITERAL( MJ,     1e6, joule);               // 1_MJ (megajoule)
+LITERAL( kJ,     1e3, joule);               // 1_kJ (kilojoule)
+LITERAL( J,        1, joule);               // 1_J (joule)
 // active power in...
-LITERAL( TW,    1e12, watt);               // 1_TW (terawatt)
-LITERAL( GW,     1e9, watt);               // 1_GW (gigawatt)
-LITERAL( MW,     1e6, watt);               // 1_MW (megawatt)
-LITERAL( kW,     1e3, watt);               // 1_kW (kilowatt)
-LITERAL( W,        1, watt);               // 1_W (Watt)
-LITERAL( mW,    1e-3, watt);               // 1_mW (milliwatt)
-LITERAL( muW,   1e-6, watt);               // 1_muW (microwatt)
-LITERAL( TWh, 3.6e15, watt);               // 1_TWh (terawatt-hour)
-LITERAL( GWh, 3.6e12, watt);               // 1_GWh (gigawatt-hour)
-LITERAL( MWh,  3.6e9, watt);               // 1_MWh (megawatt-hour)
-LITERAL( kWh,  3.6e6, watt);               // 1_kWh (kilowatt-hour)
-LITERAL( Wh,   3.6e3, watt);               // 1_Wh (watt-hour)
+LITERAL( TW,    1e12, watt);                // 1_TW (terawatt)
+LITERAL( GW,     1e9, watt);                // 1_GW (gigawatt)
+LITERAL( MW,     1e6, watt);                // 1_MW (megawatt)
+LITERAL( kW,     1e3, watt);                // 1_kW (kilowatt)
+LITERAL( W,        1, watt);                // 1_W (Watt)
+LITERAL( mW,    1e-3, watt);                // 1_mW (milliwatt)
+LITERAL( muW,   1e-6, watt);                // 1_muW (microwatt)
+LITERAL( TWh, 3.6e15, watt);                // 1_TWh (terawatt-hour)
+LITERAL( GWh, 3.6e12, watt);                // 1_GWh (gigawatt-hour)
+LITERAL( MWh,  3.6e9, watt);                // 1_MWh (megawatt-hour)
+LITERAL( kWh,  3.6e6, watt);                // 1_kWh (kilowatt-hour)
+LITERAL( Wh,   3.6e3, watt);                // 1_Wh (watt-hour)
 // active power per mass in...
 LITERAL( kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
 LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
@@ -140,26 +141,26 @@ LITERAL( ly, 9'460'730'777'119'564, meter); // 1_ly (light-year)
 LITERAL( AU, 149'597'870'691, meter);       // 1_AU (astronomical unit)
 LITERAL( pc, 30'856'775'814'913'700, meter);// 1_pc (parsec)
 
-LITERAL( MN,     1e6, newton);             // 1_MN (meganewton)
-LITERAL( kN,     1e3, newton);             // 1_kN (kilonewton)
-LITERAL( N,        1, newton);             // 1_N
+LITERAL( MN,     1e6, newton);              // 1_MN (meganewton)
+LITERAL( kN,     1e3, newton);              // 1_kN (kilonewton)
+LITERAL( N,        1, newton);              // 1_N
 	
 LITERAL( Nm,       1, newtonmeter);         // 1_Nm
 
 // IMPERIAL UNITS
 // --------------
-//       SYMBOL      FACTOR  BASE UNIT        EXAMPLE
-LITERAL( degF,            1, fahrenheit);  // 1_degF (°Fahrenheit)
-LITERAL( ft,          .3048, meter);       // 1_ft
-LITERAL( in,         0.0254, meter);       // 1_in
+//       SYMBOL      FACTOR  BASE UNIT         EXAMPLE
+LITERAL( degF,            1, fahrenheit);   // 1_degF (°Fahrenheit)
+LITERAL( ft,          .3048, meter);        // 1_ft
+LITERAL( in,         0.0254, meter);        // 1_in
 LITERAL( kn,          1.852, kilometers_per_hour); // 1_kn
-LITERAL( lb,     453.592'37, gram);        // 1_lb
-LITERAL( oz, 28.349'523'125, gram);        // 1_oz
-LITERAL( mi,      1'609.344, meter);       // 1_mi
+LITERAL( lb,     453.592'37, gram);         // 1_lb
+LITERAL( oz, 28.349'523'125, gram);         // 1_oz
+LITERAL( mi,      1'609.344, meter);        // 1_mi
 LITERAL( mph,        .44704, meters_per_second); // 1_mph
-LITERAL( NM,          1'852, meter);       // 1_NM (nautical mile)
-LITERAL( nmi,         1'852, meter);       // 1_nmi (nautical mile)
-LITERAL( yd,          .9144, meter);       // 1_yd (yard)
+LITERAL( NM,          1'852, meter);        // 1_NM (nautical mile)
+LITERAL( nmi,         1'852, meter);        // 1_nmi (nautical mile)
+LITERAL( yd,          .9144, meter);        // 1_yd (yard)
 
 #define CARDINAL(_symbol, _factor, _baseUnit) \
   constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<long long>(x) * _factor); }
@@ -190,11 +191,11 @@ LITERAL( Tbps,1e12/8, bytes_per_second);    // 1_Tbps (terabit/sec)
 
 // VARIOUS UNITS
 // -------------
-// SYMBOL       FACTOR  BASE UNIT               EXAMPLE
-LITERAL( deg,        1, degree);             // 1_deg
-LITERAL( degC,       1, celsius);            // 1_degC (°Celsius)
-LITERAL( degR, 5.0/9.0, kelvin);             // 1_degR (°Rankine)
-LITERAL( Mach,     330, meters_per_second);  // 1_Mach
+// SYMBOL       FACTOR  BASE UNIT              EXAMPLE
+LITERAL( deg,        1, degree);            // 1_deg
+LITERAL( degC,       1, celsius);           // 1_degC (°Celsius)
+LITERAL( degR, 5.0/9.0, kelvin);            // 1_degR (°Rankine)
+LITERAL( Mach,     330, meters_per_second); // 1_Mach
 
 #undef LITERAL
 #undef CARDINAL
