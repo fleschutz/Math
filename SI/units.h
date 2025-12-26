@@ -11,7 +11,7 @@
 
 namespace si
 {
-	typedef long double quantity; // a value without(!) unit, e.g. 42
+	typedef long double quantity; // datatype for a value without(!) unit, e.g. 42
 
 	namespace detail
 	{
@@ -113,7 +113,7 @@ namespace si
 		template <class T>
 		using scalar_value_type_t = typename scalar_value_type<T>::type;
 
-#define SI_INLINE /*!!!TODO __forceinline*/
+#define SI_INLINE inline 
 #define SI_INLINE_CONSTEXPR constexpr SI_INLINE
 
 		// Storage for plain arithmetic types (float, double, int, ...)
@@ -698,7 +698,7 @@ namespace si
 	SI_QUANTITY(mass,                0, 1, 0, 0, 0);
 	SI_QUANTITY(time,                0, 0, 1, 0, 0);
 	SI_QUANTITY(temperature,         0, 0, 0, 1, 0); // (thermodynamic temperature)
-	SI_QUANTITY(current,             0, 0, 0, 0, 1); // electric current (TODO)
+	SI_QUANTITY(electric_current,    0, 0, 0, 0, 1); // TODO
 	SI_QUANTITY(amount_of_substance, 0, 0, 0, 0, 1); // TODO
 	SI_QUANTITY(luminous_intensity,  0, 0, 0, 0, 1); // TODO
 	SI_QUANTITY(angle,               0, 0, 0, 0, 1); // (extra)
@@ -757,17 +757,16 @@ namespace si
 	inline constexpr auto week        = unit<time, 7*24*3600>();
 	inline constexpr auto millisecond = milli * second;
 	inline constexpr auto microsecond = micro * second;
-	inline constexpr auto nanosecond  = nano * second;
 	// mass in...
 	inline constexpr auto kilogram    = unit<mass>();
 	inline constexpr auto ton         = kilo * kilogram;
 	inline constexpr auto gram        = milli * kilogram;
 	inline constexpr auto milligram   = micro * kilogram;
-	inline constexpr auto microgram   = nano * kilogram;
 	// thermodynamic temperature in...
 	inline constexpr auto kelvin      = unit<temperature>();
 	// electric current in...
-	inline constexpr auto ampere      = unit<detail::null_dimension>(); // TODO
+	//inline constexpr auto ampere      = unit<detail::null_dimension>(); // TODO
+	inline constexpr auto ampere      = unit<electric_current>();
 	// amount of substance in...
 	inline constexpr auto mole        = unit<amount_of_substance>(); 
 	// luminous intensity in...
@@ -813,6 +812,7 @@ namespace si
 	inline constexpr auto joulesecond = joule * second;
 	inline constexpr auto joules_per_kelvin = joule / kelvin;
 	inline constexpr auto joules_per_second_per_kilogram = joule / second / kilogram;
+	inline constexpr auto gray = joule / kilogram;
 
 	inline constexpr auto joules_per_second = joule / second;
 	inline constexpr auto watt        = joule / second; // (energy per time span)

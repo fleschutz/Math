@@ -152,12 +152,12 @@ int main()
 	auto cos = 0.018;
 	auto y = 5.8e7; // in S/m for copper
 	auto A = (2.0 * cable_length * electric_current * cos) / (y * max_loss);
-	print(A);
+	//print(A);
 } {
 	// Here's the basic principle:
-	quantity x = 42;        // <- x got a number without any unit
+	quantity x = 42;        // <- x contains a number without any unit
 	si::time t = x * 1_sec; // <- t is now 42 seconds
-	quantity y = t / 1_sec; // <- y again got a number without any unit
+	quantity y = t / 1_sec; // <- y again contains a number without any unit
 }
 	return 0;
 }

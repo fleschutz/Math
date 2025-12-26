@@ -7,11 +7,11 @@ namespace si
 {
 #define LITERAL(_symbol, _factor, _baseUnit) \
   constexpr auto operator "" _ ## _symbol(long double x) { return _baseUnit(static_cast<double>(x) * static_cast<double>(_factor)); } \
-  constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<double>(x) * _factor); }
+  constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<double>(x) * static_cast<double>(_factor)); }
 
 // THE 7 SI BASE UNITS
 // -------------------
-// SYMBOL     FACTOR  BASE UNIT             EXAMPLE
+// SYMBOL     FACTOR  BASE UNIT                EXAMPLE
 // length in...
 LITERAL( km,     1e3, meter);               // 1_km (kilometer)
 LITERAL( m,        1, meter);               // 1_m
@@ -62,13 +62,14 @@ LITERAL( cd,       1, candela);             // 1_cd
 
 // THE 22 COHERENT DERIVED SI UNITS
 // --------------------------------
-// SYMBOL     FACTOR  BASE UNIT             EXAMPLE
+// SYMBOL     FACTOR  BASE UNIT                EXAMPLE
 // area in...
 LITERAL( km²,    1e6, meter2);              // 1_km² (square kilometer)
+LITERAL( ha,     1e5, meter2);              // 1_ha
 LITERAL( m²,       1, meter2);              // 1_m²  (square meter)
 LITERAL( cm²,   1e-4, meter2);              // 1_cm² (square centimeter)
 LITERAL( mm²,   1e-6, meter2);              // 1_mm² (square millimeter)
-LITERAL( ha,   10000, meter2);              // 1_ha
+LITERAL( μm²,   1e-9, meter2);              // 1_μm² (square micrometer)
 // volume in...
 LITERAL( km³,    1e9, meter3);              // 1_km³ (cubic kilometer)
 LITERAL( m³,       1, meter3);              // 1_m³  (cubic meter)
@@ -133,6 +134,8 @@ LITERAL( GWh, 3.6e12, watt);                // 1_GWh (gigawatt-hour)
 LITERAL( MWh,  3.6e9, watt);                // 1_MWh (megawatt-hour)
 LITERAL( kWh,  3.6e6, watt);                // 1_kWh (kilowatt-hour)
 LITERAL( Wh,   3.6e3, watt);                // 1_Wh (watt-hour)
+// ionizing radiation dose in...
+LITERAL( Gy,       1, gray);                // 1_Gy (absorption of one joule of radiation energy per kilogram of matter)
 // active power per mass in...
 LITERAL( kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
 LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
