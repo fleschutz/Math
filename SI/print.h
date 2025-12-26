@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "literals.h"
+#include "values/Earth.h"
 
 namespace si
 {
@@ -25,8 +26,14 @@ namespace si
 	// -------------------
 	void print(length d)
 	{
-		if (abs(d) >= constant::lightyear)
-			print(d / constant::lightyear, " light-year(s)");
+		if (abs(d) >= 1_Mly)
+			print(d / 1_Mly, "Mly (megalight-years)");
+		else if (abs(d) >= 1_pc)
+			print(d / 1_pc, "pc (parsec)");
+		else if (abs(d) >= 1_ly)
+			print(d / 1_ly, "ly (light-years)");
+		else if (abs(d) >= 1_au)
+			print(d / 1_au, "au (astronomical unit)");
 		else if (abs(d) >= 1_km)
 			print(d / 1_km, "km");
 		else if (abs(d) >= 1_m)
@@ -41,12 +48,12 @@ namespace si
 
 	void print(time t)
 	{
-		if (abs(t) >= year(1.0))
-			print(year(t), " year(s)");
-		else if (abs(t) >= week(1.0))
-			print(week(t), " week(s)");
-		else if (abs(t) >= day(2.0))
-			print(day(t), " day(s)");
+		if (abs(t) >= Earth::year)
+			print(t / Earth::year, " year(s)");
+		else if (abs(t) >= Earth::week)
+			print(t / Earth::week, " week(s)");
+		else if (abs(t) > Earth::day)
+			print(t / Earth::day, " day(s)");
 		else if (abs(t) >= 1_h)
 		{
 			print((int)(t / 1_h), "h");
@@ -126,12 +133,16 @@ namespace si
 	{
 		if (abs(a) >= 1_km²)
 			print(a / 1_km², "km²");
+		else if (abs(a) >= 1_ha)
+			print(a / 1_ha, "ha");
 		else if (abs(a) >= 1_m²)
 			print(a / 1_m², "m²");
 		else if (abs(a) >= 1_cm²)
 			print(a / 1_cm², "cm²");
-		else
+		else if (abs(a) >= 1_mm²)
 			print(a / 1_mm², "mm²");
+		else
+			print(a / 1_μm², "μm²");
 	}
 
 	void print(volume v)
@@ -142,8 +153,10 @@ namespace si
 			print(v / 1_m³, "m³");
 		else if (abs(v) >= 1_cm³)
 			print(v / 1_cm³, "cm³");
-		else
+		else if (abs(v) >= 1_mm³)
 			print(v / 1_mm³, "mm³");
+		else
+			print(v / 1_μm³, "μm³");
 	}
 
 	void print(speed v)
@@ -191,8 +204,20 @@ namespace si
 
 	void print(angle a)
 	{
-		std::cout << degree(a) << "° ";
+		print(degree(a), "°");
 	}
+
+#if 0
+	void print(pascal_ p)
+	{
+		print(p / 1_Pa, "Pa");
+	}
+
+	void print(watt_per_meter2 w)
+	{
+		print(w / 1_W_per_m², "W/m²");
+	}
+#endif
 
 	void print(BMI v)
 	{

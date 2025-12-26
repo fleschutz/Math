@@ -25,10 +25,13 @@ SET( water_area,              361'132'000, kilometer2);
 SET( volume,                   1.08321e12, kilometer3);
 SET( mass,                      5.9723e24, kilogram);
 SET( equatorial_rotation_velocity, 1674.4, kilometers_per_hour);
-SET( age,                          4.5e12, year);
 SET( satellites,                        1, quantity); // see Moon.h
 SET( human_population,              8.2e9, quantity); 
 SET( solar_constant,                 1361, watt_per_meter2); // amount of Sun energy per square meter
+SET( day,                    24 * 60 * 60, second); 
+SET( week,         7 * second(Earth::day), second);
+SET( year,    365.25 * second(Earth::day), second); // (on average)
+SET( age,    4.5e12 * second(Earth::year), second);
 
 // Mountains:  (source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth, heights above MSL, sorted by height)
 SET( Mount_Everest_height,           8849, meter);

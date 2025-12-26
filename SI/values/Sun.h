@@ -19,7 +19,6 @@ SET( mass,                       1.9884e33, kilogram);
 SET( mean_distance_from_Earth,    1.496e11, meter);
 SET( flattening,                   0.00005, quantity);
 SET( average_density,                1.408, grams_per_centimeter3);
-SET( age,                            4.6e9, year);
 SET( center_temperature,        15'700'000, kelvin);
 SET( photosphere_temperature,        5'772, kelvin);
 SET( corona_temperature,         5'000'000, kelvin);

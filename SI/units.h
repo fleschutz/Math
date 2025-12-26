@@ -753,8 +753,6 @@ namespace si
 	inline constexpr auto minute      = unit<time, 60>();
 	inline constexpr auto hour        = unit<time, 3600>();
 	inline constexpr auto day         = unit<time, 24*3600>();
-	inline constexpr auto year        = unit<time, 365*24*3600>();
-	inline constexpr auto week        = unit<time, 7*24*3600>();
 	inline constexpr auto millisecond = milli * second;
 	inline constexpr auto microsecond = micro * second;
 	// mass in...
@@ -771,32 +769,33 @@ namespace si
 	// luminous intensity in...
 	inline constexpr auto candela     = unit<luminous_intensity>();
 
-	// The 22 SI Coherent Derived Units
-	// --------------------------------
+	// The 22 SI Derived Units
+	// -----------------------
+	inline constexpr auto hertz       = unit<frequency>();
+	inline constexpr auto kilohertz   = kilo * hertz;
+	//inline constexpr auto megahertz   = mega * hertz;
+	//inline constexpr auto gigahertz   = giga * hertz;
+
 	inline constexpr auto meter2      = unit<area>();
 	inline constexpr auto kilometer2  = kilo * kilo * meter2;
 	inline constexpr auto centimeter2 = centi * centi * meter2;
 	inline constexpr auto millimeter2 = milli * milli * meter2;
+
+	inline constexpr auto kilograms_per_meter2 = kilogram / meter2;
 
 	inline constexpr auto meter3      = unit<volume>();
 	inline constexpr auto kilometer3  = kilo * kilo * kilo * meter3;
 	inline constexpr auto centimeter3 = centi * centi * centi * meter3;
 	inline constexpr auto millimeter3 = milli * milli * milli * meter3;
 
+	inline constexpr auto kilograms_per_meter3 = kilogram / meter3;
+	inline constexpr auto grams_per_centimeter3 = gram / centimeter3;
+
 	inline constexpr auto meters_per_second = meter / second;
 	inline constexpr auto kilometers_per_hour = kilometer / hour;
 	inline constexpr auto millimeters_per_hour = millimeter / hour;
 
 	inline constexpr auto meters_per_second2 = meter / (second * second);
-
-	inline constexpr auto kilograms_per_meter2 = kilogram / meter2;
-	inline constexpr auto kilograms_per_meter3 = kilogram / meter3;
-	inline constexpr auto grams_per_centimeter3 = gram / centimeter3;
-
-	inline constexpr auto hertz       = unit<frequency>();
-	inline constexpr auto kilohertz   = kilo * hertz;
-	inline constexpr auto megahertz   = mega * hertz;
-	inline constexpr auto gigahertz   = giga * hertz;
 
 	inline constexpr auto newton      = kilogram * meter / (second * second);
 	inline constexpr auto kilonewton  = kilo * newton;
@@ -812,6 +811,7 @@ namespace si
 	inline constexpr auto joules_per_kelvin = joule / kelvin;
 	inline constexpr auto joules_per_second_per_kilogram = joule / second / kilogram;
 	inline constexpr auto gray = joule / kilogram;
+	inline constexpr auto sievert = joule / kilogram;
 
 	inline constexpr auto joules_per_second = joule / second;
 	inline constexpr auto watt        = joule / second; // (energy per time span)
@@ -819,7 +819,7 @@ namespace si
 
 	inline constexpr auto pascal_     = newton / (meter * meter);
 	inline constexpr auto hectopascal = hecto * pascal_;
-	inline constexpr auto millibar    = hectopascal;
+	inline constexpr auto millibar    = hecto * pascal_;
 	inline constexpr auto bar         = hecto * kilo * pascal_;
 
 	inline constexpr auto newtonmeter = newton * meter;
@@ -849,12 +849,10 @@ namespace si
 
 	inline constexpr auto byte        = unit<detail::null_dimension>();
 	inline constexpr auto bytes_per_second = byte / second;
-
-	typedef long double volt;
-	typedef long double ohm;
-
-	typedef long double lumens_per_watt; // TODO
-	typedef long double ohm; // TODO
+	inline constexpr auto steradian   = unit<detail::null_dimension>();
+	inline constexpr auto volt        = unit<detail::null_dimension>(); // TODO
+	inline constexpr auto ohm         = unit<detail::null_dimension>(); // TODO
+	inline constexpr auto lumens_per_watt = unit<detail::null_dimension>(); // TODO
 }
 
 #undef SI_RETURN_QUANTITY

@@ -24,8 +24,6 @@ namespace si
 		static_assert(1_mm == 0.001_m);
 
 		// SI second:
-		static_assert(1_week == 7_day);
-		static_assert(1_day == 24_h);
 		static_assert(1_h == 60_min);
 		static_assert(1_min == 60_s);
 		static_assert(1_s == 1000_ms);

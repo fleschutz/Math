@@ -102,9 +102,10 @@ int main()
 	print(volume);
 } {
 	print("What's the distance the Earth has travelled so far? It's... ");
-	auto distance_per_year = formula::circumference_of_circle(constant::AU);
-	auto total = distance_per_year * (Earth::age / 1_year);
-	print(total);
+	auto distance_Earth_to_Sun = constant::AU;
+	auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
+	auto distance_total = distance_per_year * (Earth::age / Earth::year);
+	print(distance_total);
 } {
 	print("What's a car's braking distance on dry asphalt from 100km/h? It's... ");
 	auto deceleration = 8_mps²; // on dry asphalt
