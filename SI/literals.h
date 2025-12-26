@@ -116,29 +116,36 @@ LITERAL( Ohm,      1, ohm);                 // 1_Ohm
 LITERAL( mOhm,  1e-3, ohm);                 // 1_mOhm (milliohm)
 LITERAL( μOhm,  1e-6, ohm);                 // 1_μOhm (microohm)
 // energy in...
-LITERAL( TJ,    1e12, joule);               // 1_TJ (terajoule)
-LITERAL( GJ,     1e9, joule);               // 1_GJ (gigajoule)
-LITERAL( MJ,     1e6, joule);               // 1_MJ (megajoule)
-LITERAL( kJ,     1e3, joule);               // 1_kJ (kilojoule)
-LITERAL( J,        1, joule);               // 1_J (joule)
+LITERAL( TJ,    1e12, joule);               // 1_TJ  (terajoule)
+LITERAL( GJ,     1e9, joule);               // 1_GJ  (gigajoule)
+LITERAL( MJ,     1e6, joule);               // 1_MJ  (megajoule)
+LITERAL( kJ,     1e3, joule);               // 1_kJ  (kilojoule)
+LITERAL( J,        1, joule);               // 1_J   (joule)
+LITERAL( cal, 4.1868, joule);               // 1_cal (calorie)
+LITERAL( kcal,4186.8, joule);               // 1_kcal (kilocalorie)
 // active power in...
-LITERAL( TW,    1e12, watt);                // 1_TW (terawatt)
-LITERAL( GW,     1e9, watt);                // 1_GW (gigawatt)
-LITERAL( MW,     1e6, watt);                // 1_MW (megawatt)
-LITERAL( kW,     1e3, watt);                // 1_kW (kilowatt)
-LITERAL( W,        1, watt);                // 1_W (Watt)
-LITERAL( mW,    1e-3, watt);                // 1_mW (milliwatt)
+LITERAL( TW,    1e12, watt);                // 1_TW  (terawatt)
+LITERAL( GW,     1e9, watt);                // 1_GW  (gigawatt)
+LITERAL( MW,     1e6, watt);                // 1_MW  (megawatt)
+LITERAL( kW,     1e3, watt);                // 1_kW  (kilowatt)
+LITERAL( W,        1, watt);                // 1_W   (Watt)
+LITERAL( mW,    1e-3, watt);                // 1_mW  (milliwatt)
 LITERAL( muW,   1e-6, watt);                // 1_muW (microwatt)
 LITERAL( TWh, 3.6e15, watt);                // 1_TWh (terawatt-hour)
 LITERAL( GWh, 3.6e12, watt);                // 1_GWh (gigawatt-hour)
 LITERAL( MWh,  3.6e9, watt);                // 1_MWh (megawatt-hour)
 LITERAL( kWh,  3.6e6, watt);                // 1_kWh (kilowatt-hour)
-LITERAL( Wh,   3.6e3, watt);                // 1_Wh (watt-hour)
+LITERAL( Wh,   3.6e3, watt);                // 1_Wh  (watt-hour)
+LITERAL( hp, 745.69987158227022, watt);     // 1_hp  (horsepower)
+LITERAL( PS, 735.49875, watt);              // 1_PS  ('Pferdestärke', german horsepower)
 // ionizing radiation dose in...
 LITERAL( Gy,       1, gray);                // 1_Gy (absorption of one joule of radiation energy per kilogram of matter)
 // active power per mass in...
 LITERAL( kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
 LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
+// pressure in...
+LITERAL( at,98'066.5, pascal_);             // 1_at   (atmosphere)
+LITERAL( mmHg,133.3224, pascal_);           // 1_mmHg (millimeter mercury)
 // astronomical units in...
 LITERAL( ly, 9'460'730'777'119'564, meter); // 1_ly (light-year)
 LITERAL( AU, 149'597'870'691, meter);       // 1_AU (astronomical unit)
@@ -149,6 +156,7 @@ LITERAL( kN,     1e3, newton);              // 1_kN (kilonewton)
 LITERAL( N,        1, newton);              // 1_N
 	
 LITERAL( Nm,       1, newtonmeter);         // 1_Nm
+
 
 // IMPERIAL UNITS
 // --------------

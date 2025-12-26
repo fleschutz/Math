@@ -765,7 +765,6 @@ namespace si
 	// thermodynamic temperature in...
 	inline constexpr auto kelvin      = unit<temperature>();
 	// electric current in...
-	//inline constexpr auto ampere      = unit<detail::null_dimension>(); // TODO
 	inline constexpr auto ampere      = unit<electric_current>();
 	// amount of substance in...
 	inline constexpr auto mole        = unit<amount_of_substance>(); 
@@ -825,6 +824,9 @@ namespace si
 
 	inline constexpr auto newtonmeter = newton * meter;
 	inline constexpr auto newtonsecond= newton * second;
+
+	inline constexpr auto ampere_per_meter = ampere / meter;
+	inline constexpr auto ampere_per_meter2 = ampere / (meter * meter);
 
 	// IMPERIAL UNITS
 	inline constexpr auto pound       = unit<mass, 45359237, 100000000>();
