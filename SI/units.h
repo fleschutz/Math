@@ -825,6 +825,7 @@ namespace si
 	inline constexpr auto coloumb     = ampere * second;
 	inline constexpr auto volt        = joule / coloumb; 
 	inline constexpr auto ohm         = volt / ampere;
+	inline constexpr auto tesla       = kilogram / (ampere * second * second);
 
 	inline constexpr auto radian      = unit<angle>();
 	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
