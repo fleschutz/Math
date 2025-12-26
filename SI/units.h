@@ -121,9 +121,6 @@ namespace si
 		class quantity_storage
 		{
 		public:
-			// Make sure no funny stuff is going on
-			// static_assert(std::is_arithmetic_v<T> && std::is_same_v<std::decay_t<T>, T>, "Not a valid T");
-
 			SI_INLINE_CONSTEXPR quantity_storage()
 				: m_value(0)
 			{}
@@ -773,8 +770,6 @@ namespace si
 	// -----------------------
 	inline constexpr auto hertz       = unit<frequency>();
 	inline constexpr auto kilohertz   = kilo * hertz;
-	//inline constexpr auto megahertz   = mega * hertz;
-	//inline constexpr auto gigahertz   = giga * hertz;
 
 	inline constexpr auto meter2      = unit<area>();
 	inline constexpr auto kilometer2  = kilo * kilo * meter2;
@@ -827,6 +822,19 @@ namespace si
 
 	inline constexpr auto ampere_per_meter = ampere / meter;
 	inline constexpr auto ampere_per_meter2 = ampere / (meter * meter);
+	inline constexpr auto coloumb     = ampere * second;
+	inline constexpr auto volt        = joule / coloumb; 
+	inline constexpr auto ohm         = volt / ampere;
+
+	inline constexpr auto radian      = unit<angle>();
+	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
+	inline constexpr auto radians_per_second = radian / second; 
+	inline constexpr auto degrees_per_second = degree / second;
+	inline constexpr auto steradian   = unit<detail::null_dimension>();
+
+	inline constexpr auto lumen       = candela * steradian; 
+	inline constexpr auto lumen_second = lumen * second;
+	inline constexpr auto lumens_per_watt = lumen / watt; 
 
 	// IMPERIAL UNITS
 	inline constexpr auto pound       = unit<mass, 45359237, 100000000>();
@@ -842,22 +850,8 @@ namespace si
 
 	inline constexpr auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
 
-	inline constexpr auto radian      = unit<angle>();
-	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
-	inline constexpr auto radians_per_second = unit<angular_speed>();
-	inline constexpr auto degrees_per_second = degree / second;
-
 	inline constexpr auto byte        = unit<detail::null_dimension>();
 	inline constexpr auto bytes_per_second = byte / second;
-	inline constexpr auto steradian   = unit<detail::null_dimension>();
-
-	inline constexpr auto coloumb     = ampere * second;
-	inline constexpr auto volt        = unit<detail::null_dimension>(); // TODO
-	inline constexpr auto ohm         = unit<detail::null_dimension>(); // TODO
-
-	inline constexpr auto lumen = unit<detail::null_dimension>(); // TODO
-	inline constexpr auto lumen_second = lumen * second;
-	inline constexpr auto lumens_per_watt = lumen / watt; 
 }
 
 #undef SI_RETURN_QUANTITY

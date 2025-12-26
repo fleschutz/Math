@@ -133,8 +133,8 @@ namespace si
 	{
 		if (abs(a) >= 1_km²)
 			print(a / 1_km², "km²");
-		else if (abs(a) >= 1_ha)
-			print(a / 1_ha, "ha");
+		else if (abs(a) >= 1_hm²)
+			print(a / 1_hm², "hm²");
 		else if (abs(a) >= 1_m²)
 			print(a / 1_m², "m²");
 		else if (abs(a) >= 1_cm²)

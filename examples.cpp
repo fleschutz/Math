@@ -153,7 +153,7 @@ int main()
 	auto cos = 0.018;
 	auto y = 5.8e7; // in S/m for copper
 	auto A = (2.0 * cable_length * electric_current * cos) / (y * max_loss);
-	//print(A);
+	// print(A);
 } {
 	// Here's the basic principle:
 	quantity x = 42;        // <- x contains a number without any unit

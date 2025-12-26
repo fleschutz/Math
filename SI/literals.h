@@ -13,6 +13,7 @@ namespace si
 // -------------------
 // SYMBOL     FACTOR  BASE UNIT                EXAMPLE
 // length in...
+LITERAL( Mm,     1e6, meter);               // 1_Mm (megameter)
 LITERAL( km,     1e3, meter);               // 1_km (kilometer)
 LITERAL( m,        1, meter);               // 1_m
 LITERAL( meter,    1, meter);               // 1_meter
@@ -21,13 +22,13 @@ LITERAL( cm,    1e-2, meter);               // 1_cm (centimeter)
 LITERAL( mm,    1e-3, meter);               // 1_mm (millimeter)
 LITERAL( μm,    1e-6, meter);               // 1_μm (micrometer)
 // time in...
-LITERAL( h,     3600, second);              // 1_h
-LITERAL( min,     60, second);              // 1_min
-LITERAL( s,        1, second);              // 1_s
+LITERAL( h,     3600, second);              // 1_h   (hour)
+LITERAL( min,     60, second);              // 1_min (minute)
+LITERAL( s,        1, second);              // 1_s   (second)
 LITERAL( sec,      1, second);              // 1_sec
 LITERAL( second,   1, second);              // 1_second
-LITERAL( ms,    1e-3, second);              // 1_ms (millisecond)
-LITERAL( μs,    1e-6, second);              // 1_μs (microsecond)
+LITERAL( ms,    1e-3, second);              // 1_ms  (millisecond)
+LITERAL( μs,    1e-6, second);              // 1_μs  (microsecond)
 // mass in...
 LITERAL( mt,     1e9, kilogram);            // 1_mt (megaton)
 LITERAL( kt,     1e6, kilogram);            // 1_kt (kiloton)
@@ -57,12 +58,12 @@ LITERAL( mol,      1, mole);                // 1_mol
 // luminous intensity in...
 LITERAL( cd,       1, candela);             // 1_cd
 
-// THE 22 COHERENT DERIVED SI UNITS
-// --------------------------------
+// THE 22 DERIVED SI UNITS
+// -----------------------
 // SYMBOL     FACTOR  BASE UNIT                EXAMPLE
 // area in...
 LITERAL( km²,    1e6, meter2);              // 1_km² (square kilometer)
-LITERAL( ha,     1e4, meter2);              // 1_ha  (hectare)
+LITERAL( hm²,    1e4, meter2);              // 1_hm² (hectare)
 LITERAL( m²,       1, meter2);              // 1_m²  (square meter)
 LITERAL( cm²,   1e-4, meter2);              // 1_cm² (square centimeter)
 LITERAL( mm²,   1e-6, meter2);              // 1_mm² (square millimeter)
@@ -147,6 +148,7 @@ LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (wa
 // pressure in...
 LITERAL( MPa,    1e6, pascal_);             // 1_MPa  (megapascal) 
 LITERAL( kPa,    1e3, pascal_);             // 1_kPa  (kilopascal) 
+LITERAL( hPa,    1e2, pascal_);             // 1_hPa  (hectopascal) 
 LITERAL( Pa,       1, pascal_);             // 1_Pa   (pascal) 
 LITERAL( at,98'066.5, pascal_);             // 1_at   (atmosphere)
 LITERAL( bar,    1e5, pascal_);             // 1_bar 
