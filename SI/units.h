@@ -693,18 +693,21 @@ namespace si
 	using name_ ## 2f = name_ ## _t<detail::vec2<float>>;							\
 	using name_ ## 3 = name_ ## _t<detail::vec3<double>>;							\
 	using name_ ## 3f = name_ ## _t<detail::vec3<float>>															
-	// The 7 SI base units:  l  m  t  T  ° 
-	SI_QUANTITY(length,      1, 0, 0, 0, 0);
-	SI_QUANTITY(mass,        0, 1, 0, 0, 0);
-	SI_QUANTITY(time,        0, 0, 1, 0, 0);
-	SI_QUANTITY(temperature, 0, 0, 0, 1, 0);
-	SI_QUANTITY(angle,       0, 0, 0, 0, 1);
+	// The 7 SI base units:          l  m  t  T  ° 
+	SI_QUANTITY(length,              1, 0, 0, 0, 0);
+	SI_QUANTITY(mass,                0, 1, 0, 0, 0);
+	SI_QUANTITY(time,                0, 0, 1, 0, 0);
+	SI_QUANTITY(temperature,         0, 0, 0, 1, 0); // (thermodynamic temperature)
+	SI_QUANTITY(current,             0, 0, 0, 0, 1); // electric current (TODO)
+	SI_QUANTITY(amount_of_substance, 0, 0, 0, 0, 1); // TODO
+	SI_QUANTITY(luminous_intensity,  0, 0, 0, 0, 1); // TODO
+	SI_QUANTITY(angle,               0, 0, 0, 0, 1); // (extra)
 	//...
 
 	// The 22 SI derived units:
 	SI_QUANTITY(frequency,   0, 0, -1, 0, 0); // (per time)
 	SI_QUANTITY(speed,       1, 0, -1, 0, 0); // (length per time)
-	SI_QUANTITY(angular_speed,0,0, -1, 0, 1);
+	SI_QUANTITY(angular_speed,0,0, -1, 0, 1); // (degree per time)
 	SI_QUANTITY(acceleration,1, 0, -2, 0, 0); // (length per time²)
 	SI_QUANTITY(jerk,        1, 0, -3, 0, 0);
 	SI_QUANTITY(force,       1, 1, -2, 0, 0);
@@ -715,14 +718,14 @@ namespace si
 	SI_QUANTITY(power,       2, 1, -3, 0, 0);
 	SI_QUANTITY(area,        2, 0,  0, 0, 0); // (length²)
 	SI_QUANTITY(volume,      3, 0,  0, 0, 0); // (length³)
-	SI_QUANTITY(density,    -3, 1,  0, 0, 0);
+	SI_QUANTITY(density,    -3, 1,  0, 0, 0); // (mass per length³)
 	SI_QUANTITY(BMI,        -2, 1,  0, 0, 0); // (mass per length²)
 	//...
 
 	using position2d = length2;
 	using position = length3;
 
-	// SI prefixes:
+	// SI PREFIXES
 	//inline constexpr auto exa   = unit<detail::null_dimension, 1000000000000000000>();
 	//inline constexpr auto peta  = unit<detail::null_dimension, 1000000000000000>();
 	//inline constexpr auto tera  = unit<detail::null_dimension, 1000000000000>();
@@ -738,13 +741,14 @@ namespace si
 	//inline constexpr auto pico  = unit<detail::null_dimension, 1, 1000000000000>();
 	//inline constexpr auto femto = unit<detail::null_dimension, 1, 1000000000000000>();
 
-	// The 7 SI base units:
+	// The 7 SI Base Units
+	// -------------------
+	// length in...
 	inline constexpr auto meter       = unit<length>();
 	inline constexpr auto kilometer   = kilo * meter; 
 	inline constexpr auto centimeter  = centi * meter;
 	inline constexpr auto millimeter  = milli * meter;
-	inline constexpr auto micrometer  = micro * meter;
-
+	// time in...
 	inline constexpr auto second      = unit<time>();
 	inline constexpr auto minute      = unit<time, 60>();
 	inline constexpr auto hour        = unit<time, 3600>();
@@ -754,23 +758,23 @@ namespace si
 	inline constexpr auto millisecond = milli * second;
 	inline constexpr auto microsecond = micro * second;
 	inline constexpr auto nanosecond  = nano * second;
-
+	// mass in...
 	inline constexpr auto kilogram    = unit<mass>();
 	inline constexpr auto ton         = kilo * kilogram;
 	inline constexpr auto gram        = milli * kilogram;
 	inline constexpr auto milligram   = micro * kilogram;
 	inline constexpr auto microgram   = nano * kilogram;
-
+	// thermodynamic temperature in...
 	inline constexpr auto kelvin      = unit<temperature>();
-	inline constexpr auto megakelvin  = mega * kelvin;
-	inline constexpr auto gigakelvin  = giga * kelvin;
-	inline constexpr auto millikelvin = milli * kelvin;
+	// electric current in...
+	inline constexpr auto ampere      = unit<detail::null_dimension>(); // TODO
+	// amount of substance in...
+	inline constexpr auto mole        = unit<amount_of_substance>(); 
+	// luminous intensity in...
+	inline constexpr auto candela     = unit<luminous_intensity>();
 
-	typedef long double volt;
-	typedef long double ampere;
-	typedef long double ohm;
-
-	// The 22 SI derived units:
+	// The 22 SI Coherent Derived Units
+	// --------------------------------
 	inline constexpr auto meter2      = unit<area>();
 	inline constexpr auto kilometer2  = kilo * kilo * meter2;
 	inline constexpr auto centimeter2 = centi * centi * meter2;
@@ -822,7 +826,7 @@ namespace si
 	inline constexpr auto newtonmeter = newton * meter;
 	inline constexpr auto newtonsecond= newton * second;
 
-	// Imperial Units:
+	// IMPERIAL UNITS
 	inline constexpr auto pound       = unit<mass, 45359237, 100000000>();
 	inline constexpr auto feet        = unit<length, 3048, 10000>();
 	inline constexpr auto nautical_mile = unit<length, 1852, 100>();
@@ -844,7 +848,9 @@ namespace si
 	inline constexpr auto byte        = unit<detail::null_dimension>();
 	inline constexpr auto bytes_per_second = byte / second;
 
-	typedef long double mol; // TODO
+	typedef long double volt;
+	typedef long double ohm;
+
 	typedef long double lumens_per_watt; // TODO
 	typedef long double ohm; // TODO
 }

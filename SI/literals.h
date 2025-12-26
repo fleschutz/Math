@@ -21,14 +21,14 @@ LITERAL( cm,    1e-2, meter);               // 1_cm (centimeter)
 LITERAL( mm,    1e-3, meter);               // 1_mm (millimeter)
 LITERAL( μm,    1e-6, meter);               // 1_μm (micrometer)
 // time in...
+LITERAL( h,     3600, second);              // 1_h
+LITERAL( min,     60, second);              // 1_min
 LITERAL( s,        1, second);              // 1_s
 LITERAL( sec,      1, second);              // 1_sec
 LITERAL( second,   1, second);              // 1_second
 LITERAL( ms,    1e-3, second);              // 1_ms (millisecond)
-LITERAL( mus,   1e-6, second);              // 1_mus (microsecond)
-LITERAL( min,     60, second);              // 1_min
-LITERAL( h,     3600, second);              // 1_h
-LITERAL( day,24*3600,second);               // 1_day (on Earth)
+LITERAL( μs,    1e-6, second);              // 1_μs (microsecond)
+LITERAL( day,24*3600, second);              // 1_day (on Earth)
 LITERAL( week,  7*24*3600,second);          // 1_week (on Earth)
 LITERAL( year,  365.25*24*3600,second);     // 1_year (on Earth)
 // mass in...
@@ -38,7 +38,7 @@ LITERAL( t,      1e3, kilogram);            // 1_t (metric ton)
 LITERAL( kg,       1, kilogram);            // 1_kg
 LITERAL( g,     1e-3, kilogram);            // 1_g (gram)
 LITERAL( mg,    1e-6, kilogram);            // 1_mg (milligram)
-LITERAL( mug,   1e-9, kilogram);            // 1_mug (microgram)
+LITERAL( μg,    1e-9, kilogram);            // 1_μg (microgram)
 // thermodynamic temperature in...
 LITERAL( GK,     1e9, kelvin);              // 1_GK (gigakelvin)
 LITERAL( MK,     1e6, kelvin);              // 1_MK (megakelvin)
@@ -56,9 +56,9 @@ LITERAL( muA,   1e-6, ampere);              // 1_muA (microampere)
 LITERAL( nA,    1e-9, ampere);              // 1_nA (nanoampere)
 LITERAL( pA,   1e-12, ampere);              // 1_pA (picoampere)
 // amount of substance in...
-// ...
+LITERAL( mol,      1, mole);                // 1_mol
 // luminous intensity in...
-//...
+LITERAL( cd,       1, candela);             // 1_cd
 
 // THE 22 COHERENT DERIVED SI UNITS
 // --------------------------------

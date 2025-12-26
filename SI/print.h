@@ -21,7 +21,8 @@ namespace si
 		std::cout << value << unit.c_str() << " ";
 	}
 
-	// The 7 SI base units:
+	// The 7 SI Base Units
+	// -------------------
 	void print(length d)
 	{
 		if (abs(d) >= constant::lightyear)
@@ -61,7 +62,7 @@ namespace si
 		else if (abs(t) >= 1_ms)
 			print(t / 1_ms, "ms");
 		else
-			print(t / 1_mus, "mus");
+			print(t / 1_μs, "μs");
 	}
 
 	void print(mass m)
@@ -76,8 +77,10 @@ namespace si
 			print(m / 1_kg, "kg");
 		else if (abs(m) >= 1_g)
 			print(m / 1_g, "g");
-		else
+		else if (abs(m) >= 1_mg)
 			print(m / 1_mg, "mg");
+		else
+			print(m / 1_μg, "μg");
 	}
 
 	void print(temperature T)
@@ -95,6 +98,17 @@ namespace si
 		else 
 			print(T / 1_nK, "nK");
 	}
+#if 0
+	void print(amount_of_substance A)
+	{
+		print(A / 1_mol, "mol");
+	}
+
+	void print(luminous_intensity I)
+	{
+		print(I / 1_cd, "cd");
+	}
+#endif
 
 	// The 22 SI derived units:
 	void print(area a)
